@@ -24,7 +24,4 @@ jobs:
 
     - name: Install 🔧
       run: npm install
-
-    - name: Lint 🧐
-      run: cd client && npm run lint:check
     
