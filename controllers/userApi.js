@@ -9,6 +9,7 @@ const login = async(req, res) => {
     try {
         const {email, password} = req.body
         data = await User.findOne({'email': email}, '-_id -__v');
+        console.log(data)
         if(!data){
             res.status(400).json({ msg: 'Usuario o contraseña incorrectos.'}); 
         }else{
@@ -63,10 +64,25 @@ const sendEmail = async(req, res) => {
     }
 };
 
+/* const signUpUser = async(req, res) => {
+    let data;
+    try {
+        const {email, password} = req.body;
+        const hashPassword = await bcrypt.hash(password, 10);
+        
+        data = await User.create({'email': email, 'password': hashPassword});
+        res.status(201).json(data);
+        
+    } catch (error) {
+        console.log('Error:', error);
+    }
+}; */
+
 const user = {
     login,
     logout,
-    sendEmail
+    sendEmail, 
+    //signUpUser
 };
 
 module.exports = user;
