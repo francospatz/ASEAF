@@ -1,9 +1,7 @@
 env:
   browser: true
   es2021: true
-  node: true
-extends:
-  - eslint:recommended
+extends: plugin:react/recommended
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -12,5 +10,7 @@ parserOptions:
 plugins:
   - react
 rules: {
-  semi: ["warn", "always"]
-}
+  semi: [
+      1,
+      'always'
+    ]}
