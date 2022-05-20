@@ -29,5 +29,5 @@ jobs:
       run: cd client && npm install
 
     - name: Lint 🧐
-      run: cd client && npm run lint:check
+      run: npm run lint:check
     
