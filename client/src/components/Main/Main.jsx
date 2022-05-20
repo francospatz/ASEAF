@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 import Login from "./Login";
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
 const Main = () => {
   return <Routes>
