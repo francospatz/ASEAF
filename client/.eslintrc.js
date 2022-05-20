@@ -15,5 +15,6 @@ module.exports = {
         2,
         'always'
       ]
-    }
+    },
+    parser: "babel-eslint"
   };
