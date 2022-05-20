@@ -15,13 +15,17 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v1 
 
-    - name: Use Node.js ${{ matrix.node-version }} 🧐
+    - name: Use Node.js ${{ matrix.node-version }} 🤘
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install 🔧
+    - name: Install Back 🔧
       run: npm install
+
+    - name: Install Front 🔧
+      run: cd client && npm install
+    
     
