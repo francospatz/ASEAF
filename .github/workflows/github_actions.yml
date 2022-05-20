@@ -22,9 +22,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install 🔧
+    - name: Install Back 🔧
       run: npm install
 
+    - name: Install Front 🔧
+      run: cd client && npm install
+
     - name: Lint 🧐
-      run: npm run lint:check
+      run: cd client && npm run lint:check
     
