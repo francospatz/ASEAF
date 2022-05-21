@@ -23,10 +23,15 @@ const login = async(req, res) => {
                 };
                 const token = jwt.sign(userForToken, jwt_secret, {expiresIn: '60m'});
                 res
+                .cookie("access-token", token, {
+                    httpOnly: true,
+                    sameSite: "strict",
+                })
                 .status(200)
                 .json({
                     msg:'Autentificación correcta.',
-                    token: token});
+                    token: token,
+                });
             }else {
                 res.status(400).json({ msg: 'Usuario o contraseña incorrectos.'});
             }
@@ -39,8 +44,8 @@ const login = async(req, res) => {
 const logout = async(req, res) => {
     let data;
     try {
-        data = await User.updateOne({ email: req.params.email }, { logged: false })
-        res.status(200).json({message: 'Token deleted'});
+        data = await User.updateOne({ email: req.params.email })
+        res.clearCookie("access-token").status(200).json({message: 'Token deleted'});
     } catch (error) {
         console.log('Error:', error);
     }
