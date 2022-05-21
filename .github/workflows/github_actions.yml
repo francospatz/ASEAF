@@ -1,7 +1,6 @@
 name: Github Actions
 
 on: 
-  pull_request:
   push:
     branches:
       - main
