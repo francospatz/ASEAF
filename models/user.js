@@ -9,7 +9,8 @@ const objectSchema = {
     password: {
         type: String,
         require: true
-    }
+    },
+    logged: Boolean
 }
 
 const userSchema = mongoose.Schema(objectSchema);

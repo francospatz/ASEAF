@@ -23,7 +23,7 @@ const login = async(req, res) => {
                 };
                 const token = jwt.sign(userForToken, jwt_secret, {expiresIn: '60m'});
                 res
-                .cookie("access-token", token, {
+                .cookie("access_token", token, {
                     httpOnly: true,
                     sameSite: "strict",
                 })
@@ -44,8 +44,8 @@ const login = async(req, res) => {
 const logout = async(req, res) => {
     let data;
     try {
-        data = await User.updateOne({ email: req.params.email })
-        res.clearCookie("access-token").status(200).json({message: 'Token deleted'});
+        data = await User.updateOne({ email: req.params.email }, {logged: false})
+        res.clearCookie("access_token").status(200).json({message: 'Token deleted'});
     } catch (error) {
         console.log('Error:', error);
     }
@@ -69,25 +69,25 @@ const sendEmail = async(req, res) => {
     }
 };
 
-/* const signUpUser = async(req, res) => {
+ const signUpUser = async(req, res) => {
     let data;
     try {
         const {email, password} = req.body;
         const hashPassword = await bcrypt.hash(password, 10);
         
-        data = await User.create({'email': email, 'password': hashPassword});
+        data = await User.create({'email': email, 'password': hashPassword, 'logged': false});
         res.status(201).json(data);
         
     } catch (error) {
         console.log('Error:', error);
     }
-}; */
+}; 
 
 const user = {
     login,
     logout,
     sendEmail, 
-    //signUpUser
+    signUpUser
 };
 
 module.exports = user;
