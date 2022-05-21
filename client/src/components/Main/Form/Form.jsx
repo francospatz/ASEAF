@@ -1,46 +1,36 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React, {useState} from "react";
+
+
 
 const Form = () => {
-  const { register, handleSubmit } = useForm();
-  // const {createPoke} = useContext(pokemonContext);
-  // const [created, setPage] = useState(false);
-
-  const onSubmit = data => {
-    console.log(data,"esto es data");
-    // createPoke(data);
-    // setPage(true);
-  };
-
-  // if (created) {
-  //   return <Navigate to='/confirmacion' />;
-  //  }
 
 
-  return <div className="create">
-  <form onSubmit={handleSubmit(onSubmit)} className="createPokemon">
-  
-      <label>Email:</label>
-      <input {...register("email")} required type='email'/>
-   
-      <label>Código Postal:</label>
-      <input {...register("cp")} minLength='5' required type='number'/>
+ 
+  return (
+    
+     <form className="formulario">
+       {/* <div className="conjunto"> */}
+      <h2 className="titulo">Participa en el Día del Pijama 2021 rellenando este formulario</h2>
+      <h4 className="subtitle">DATOS DEL COLEGIO QUE SE INSCRIBE</h4>
+      <input type="text" name="colegio" placeholder="Colegio" required />
+      <input type="text" name="comaut"  placeholder="Comunidad Autonoma" required />
+      <input type="text" name="Provincia" placeholder="Provincia" required />
 
-      <label>Colegios:</label>
-      <select required {...register("colegios")}>
-        <option value="elpilar">Nuestra señora del pilar</option>
-        <option value="antoniomachado">Colegio Antonio Machado</option>
-      </select>
-  
-      <label>Teléfono:</label>
-      <input {...register("telefono")}  minLength='9' required type='number'/>
-   
-      <label>Provincia: </label>
-      <input {...register("provincia")} required type='number'/>
-   
-    <input type="submit" className="btn-grad"/>
-  </form>
-</div>;
+      <h4 className="subtitle">DATOS DEL RESPONSABLE QUE RELLENA EL FORMULARIO</h4>
+      <input type="text" name="nombre" placeholder="Nombre" required />
+      <input type="text" name="apellidos"  placeholder="Apellido" required />
+      <input type="email" name="email" placeholder="Correo electronico" required />
+      <input type="number" name="telefono" placeholder="Teléfono" required /> <br />
+      <select name="Puesto" id="puesto">
+          <option value="profesor">Profesor</option>
+          <option value="director">Director</option>
+        </select>
+        
+        <input type="submit" value="Enviar"/>
+        {/* </div> */}
+    </form> 
+  );
 };
 
 export default Form;
+
