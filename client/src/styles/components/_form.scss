@@ -11,7 +11,7 @@
 }
 
 .conjunto{
-  max-width: 310px;
+  max-width: 16rem;
   text-align: center;
 }
 
@@ -23,7 +23,7 @@
   margin: 5px;
   border: 1px solid #EF6424;
   border-radius: 7px;
-  max-width: 304px;
+  min-width: 15rem;
   height: 38px;
   background: #FCFCFC;
   font-family: 'Nunito', sans-serif;
@@ -49,7 +49,10 @@
 
 .formulario input[type=submit]{
   background-color: #F38D5E;
-  width: 12rem;
+  min-width: 16rem;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
 }
 
 .final{
@@ -59,5 +62,57 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  max-width: 304px;
+  max-width: 19rem;
+}
+
+#puesto{
+  margin-top: 5px;
+  border: 1px solid #EF6424;
+  min-width: 15.5rem;
+  min-height: 43px;
+  border-radius: 10px;
+  color: #EF6424;
+}
+
+.locationcheckbox{
+  margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 10px !important;
+
+}
+
+.formulario input[type=checkbox]{
+  max-height: 1.5rem !important;
+  max-width: 13rem !important;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formulario input{
+    margin: 5px;
+      border: 1px solid #EF6424;
+      border-radius: 7px;
+      min-width: 25rem;
+      height: 38px;
+      background: #FCFCFC;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.9rem;
+  }
 }
