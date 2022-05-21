@@ -10,14 +10,14 @@
   align-items: center;
 }
 
-// .conjunto{
-//   max-width: 310px;
-//   text-align: center;
-// }
+.conjunto{
+  max-width: 310px;
+  text-align: center;
+}
 
-// .conjunto input{
-//   color: #EF6424;
-// }
+.conjunto input{
+  color: #EF6424;
+}
 
 .formulario input{
   margin: 5px;
@@ -49,5 +49,15 @@
 
 .formulario input[type=submit]{
   background-color: #F38D5E;
-  width: 11rem;
+  width: 12rem;
+}
+
+.final{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 304px;
 }
