@@ -17,7 +17,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // API routes
 app.use('/api', usersRouter);
-
+/* 
+app.get('/getcookie', function (req, res) {
+    res.send(req.headers.cookie);
+})
+ */
 app.use((req, res, next) => {
     return res.status(404).send({ message: 'Route' + req.url + ' Not found.' });
 });
