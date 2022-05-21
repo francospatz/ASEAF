@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Gorditas&display=swap');
+
+.createPokemon{
+    width: 100%;
+    max-width: 400px;
+    min-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 5px;
+    // background-color: rgb(141, 242, 187);
+    background-color: rgb(246, 174, 79);
+    font-family: 'Gorditas', cursive;
+    font-size: 1.3rem;
+    box-shadow: 17px 17px 27px 11px rgba(0,0,0,0.76);
+      -webkit-box-shadow: 17px 17px 27px 11px rgba(0,0,0,0.76);
+      -moz-box-shadow: 17px 17px 27px 11px rgba(0,0,0,0.76);
+  }
+  
+  .createPokemon input,.createPokemon select{
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+  }
