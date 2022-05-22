@@ -3,8 +3,8 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 require('./utils/dbmongo');
-
 const usersRouter = require('./routes/userApi');
+const schoolsRouter = require('./routes/schoolsApi');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // API routes
 app.use('/api', usersRouter);
+app.use('/apischools', schoolsRouter);
 /* 
 app.get('/getcookie', function (req, res) {
     res.send(req.headers.cookie);
