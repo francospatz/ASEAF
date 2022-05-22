@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.formulariologin{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.conjuntologin{
+  max-width: 18rem;
+  text-align: center;
+}
+
+.formulariologin input{
+  margin: 5px;
+  border: 1px solid #EF6424;
+  border-radius: 10px;
+  min-width: 17rem;
+  height: 2.7rem;
+  background: #FCFCFC;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  color: black;
+  padding: 5px;
+  margin-bottom: 3rem;
+}
+
+
+::placeholder {
+  color:#8d8d8d;
+  opacity: 1; /* Firefox */
+}
+
+.titulologin{
+  text-align: center;
+  color: #EF6424;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.9rem;
+  margin: 3rem;
+}
+
+
+.formulariologin input[type=submit]{
+  background-color: #F38D5E;
+  min-width: 10rem;
+  height: 3.5rem;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.3rem;
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+}
+
+.reccontra{
+    text-align: center;
+}
+
+.reccontra a{
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: #F38D5E;
+    font-size: 1.3rem;
+}
+
+
+
+
+// @media only screen and (min-width: 800px) {
+
+//   .formulario{
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     align-content: center;
+//     justify-content: center;
+//     align-items: center;
+//     min-width: 25rem;
+//   }
+
+//   .formulario input{
+//     margin: 5px;
+//       border: 1px solid #EF6424;
+//       border-radius: 7px;
+//       // min-width: 25rem;
+//       height: 38px;
+//       background: #FCFCFC;
+//       font-family: 'Nunito', sans-serif;
+//       font-size: 0.9rem;
+//   }
+// }
