@@ -1,5 +1,5 @@
 const { Pool } = require("pg");
-
+require('dotenv').config();
 /* let localPoolConfig = {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
@@ -18,20 +18,20 @@ const { Pool } = require("pg");
 
 
 
-const getSchools = async (email) => {
+const getSchools = async () => {
     let school;
     let result;
-    console.log(email);
+
     try {
       school = await pool.connect();
-      const data = await client.query(`select count(*) from edicion2021;`);
+      const data = await school.query(`select count(*) from edicion2021;`);
       result = data.rows;
-      console.log(result);
+      console.log(result,"esto es result");
     } catch (err) {
       console.log(err);
       throw err;
     } finally {
-      client.release;
+      school.release;
     }
     return result;
   };
