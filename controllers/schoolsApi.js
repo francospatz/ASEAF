@@ -5,8 +5,9 @@ const getTotal = async (req, res) => {
  
     try {
       if (1 ==1 ) {
-        let info = await schools.getSchools();
-        console.log(info,"esto es info");
+        let data = await schools.getSchools();
+        console.log(data,"esto es data");
+        res.status(200).json(data);
       } else {
         console.log('esta en else')
       }
