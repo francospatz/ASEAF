@@ -5,6 +5,7 @@ const schoolsApi = require('../controllers/schoolsApi');
 
 // usar protectedRoutes para la API de escuelas, así comprobamos que el JWT está activo antes de traer la info
 router.get('/total', schoolsApi.getTotal);
+router.get('/totalcam', schoolsApi.getTotalCam);
 
 
 module.exports = router;
