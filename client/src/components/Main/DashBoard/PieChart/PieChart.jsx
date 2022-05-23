@@ -60,17 +60,18 @@ const data = {
   datasets: [
     {
       label: '% Complete',
-      data: [409, 6000],
+      data: [2500, 6000],
       backgroundColor: [
         '#E36C35',
-        'transparent'
+        '#E0E0E0'
         
       ],
       borderColor: [
-        '#E36C35',
-        'grey'
+        'yellow',
+        'black'
       ],
-      borderWidth: 0
+      borderWidth: 0.2,
+      cutout: 150,
     },
   ],
 };
