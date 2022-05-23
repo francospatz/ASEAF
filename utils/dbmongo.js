@@ -6,6 +6,6 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 
 db.on("error", error => console.log(error));
-db.once('open', () => console.log('Connected to DB'))
+db.once('open', () => console.log('Connected to Atlas DB'))
 
 module.exports = mongoose;

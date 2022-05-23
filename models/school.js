@@ -1,23 +1,6 @@
-const { Pool } = require("pg");
+const pool = require("../utils/dbpg")
 require('dotenv').config();
-/* let localPoolConfig = {
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    database: process.env.DB_DATABASE,
-  }; */
-  
-  const poolConfig = process.env.PG_URL
-    ? {
-        connectionString: process.env.PG_URL,
-        ssl: { rejectUnauthorized: false },
-      }
-    : localPoolConfig;
-  const pool = new Pool(poolConfig);
 
-
-// el total de colegios inscritos 2021
 const getSchools = async () => {
     let school;
     let result;
@@ -59,4 +42,4 @@ const getSchools = async () => {
   };
 
 
-  module.exports = {getSchools, getSchoolsbyCam}
+  module.exports = { getSchools, getSchoolsbyCam }
