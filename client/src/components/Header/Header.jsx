@@ -13,12 +13,13 @@ const Header = () => {
   };
 
   const handleLogged = () => {
-    return logged ? <button onClick={() => handleLogout() }>Logout</button> : '' ;
+    return logged ? 
+    <button onClick={() => handleLogout() }>Logout</button> 
+    :
+    <><Link to="/"><p>Form</p></Link><Link to="/login"><p>Login</p></Link></> ;
   };
 
   return <div className="header">
-    <Link to="/"><p>Form</p></Link>
-    <Link to="/login"><p>Login</p></Link>
     {handleLogged()}
   </div>;
 };
