@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+footer{
+    background: #FFE2D5;
+    font-family: 'Nunito', sans-serif;
+}
+
+.seguir{
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer h3{
+    color: grey;
+    font-size: 0.9rem;
+    margin: 0 0;
+    margin-left: 2rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: #056447;
+    margin-left: 0.5rem;
+}
+
+footer h2{
+    font-size: 1.4rem;
+    margin-left: 2rem;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.logos img{
+    margin-right: 2rem;
+}
+
+.formulariofooter{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+}
+
+.formulariofooter input{
+    border: 1px solid #EF6424;
+    border-top-left-radius: 10px;
+    border-end-start-radius: 10px;
+    min-width: 14rem;
+    height: 2.7rem;
+    background: #FCFCFC;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    color: black;
+    padding: 5px;
+    margin-bottom: 3rem; 
+}
+
+
+.formulariofooter input[type=submit]{
+    background-color: #F38D5E;
+    min-width: 10rem;
+    height: 3.5rem;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3rem;
+    border-top-right-radius: 10px;
+    border-end-end-radius: 10px;
+    border-top-left-radius: 0px;
+    border-end-start-radius: 0px;
+  }
