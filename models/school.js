@@ -9,7 +9,7 @@ const getSchools = async () => {
       school = await pool.connect();
       const data = await school.query(`select count(*) from edicion2021;`);
       result = data.rows;
-      console.log(result,"esto es result");
+      //console.log(result,"esto es result");
     } catch (err) {
       console.log(err);
       throw err;
@@ -31,7 +31,7 @@ const getSchools = async () => {
       GROUP BY estado
       ORDER BY COLEGIOS_INSCRITOS DESC;`);
       result = data.rows;
-      console.log(result,"esto es result");
+      //console.log(result,"esto es result");
     } catch (err) {
       console.log(err);
       throw err;
