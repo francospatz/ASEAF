@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // API routes
 app.use('/api', usersRouter);
-app.use('/apischools', schoolsRouter);
+app.use('/api', schoolsRouter);
 
 app.use((req, res, next) => {
     return res.status(404).send({ message: 'Route' + req.url + ' Not found.' });

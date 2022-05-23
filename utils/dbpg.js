@@ -6,7 +6,7 @@ const poolConfig = {
     ssl: { rejectUnauthorized: false },
     connectionTimeoutMillis: 50000,
     idleTimeoutMillis: 50000,
-    max: 1000,
+    max: 100,
 }
 const pool = new Pool(poolConfig);
 
