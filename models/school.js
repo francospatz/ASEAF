@@ -36,7 +36,7 @@ const getSchools = async () => {
     return result;
   };
 
-  // 
+  // Cam
   const getSchoolsbyCam = async () => {
     let school;
     let result;
