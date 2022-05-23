@@ -39,7 +39,7 @@ const Form = () => {
                   <img src={logo} alt='logo' style={{width: 230}}></img>
                   <h2 className="titulologin">Bienvenido</h2>
                   <input type="email" {...register("email")} name="email" placeholder="Correo electronico" required  /* onFocus={this.value=''} */ />
-                  <input type="password" name="password" {...register("password")} placeholder="Password" required />
+                  <input type="password" name="password" autoComplete="on" {...register("password")} placeholder="Password" required />
                  <input type="submit" value="Continuar"/>
              
           </div>
