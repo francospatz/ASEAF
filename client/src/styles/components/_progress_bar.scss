@@ -8,3 +8,17 @@
         margin-bottom: 0.2%;
     }
 }
+
+.parentdiv_class>div{
+    height: 100%;
+    display: flex;
+    width: 35%;
+    background-color: orange;
+    border-radius: 40px;
+    text-align: right;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}

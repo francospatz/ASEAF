@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import PieChart from "./PieChart";
-import BarChart from "./BarChart";
-import LineChart from "./LineChart";
 import Progressbar from "./Progress_bar"
 import { LoggedContext } from "../../../context/loggedContext";
 
@@ -35,13 +33,12 @@ const DashBoard = () => {
       <p>Ciudad Autónoma de Melilla</p><Progressbar bgcolor="orange" progress='12'  height={30} />
 
       </div>
-      <BarChart/>
-   {/*    <LineChart/> */}
 
     </div>;
   } else {
     // Este return lo devuelve si el usuario no está logeado
-    return <div><p>Necesitas estar autentificado para ver el contenido</p></div>;
+    return <div>
+      <p>Necesitas estar autentificado para ver el contenido</p></div>;
   };
   
 };
