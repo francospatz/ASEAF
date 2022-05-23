@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import LineChart from "./LineChart";
+import Progress_bar from "./Progress_bar";
 
-describe("LineChart", () => {
+describe("Progress_bar", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<LineChart />);
+    const wrapper = shallow(<Progress_bar />);
     expect(wrapper).toMatchSnapshot();
   });
 });

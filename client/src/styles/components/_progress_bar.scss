@@ -1,0 +1,24 @@
+.progress_bar_class {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 1rem;
+    & p {
+        margin-left: 5%;
+        margin-bottom: 0.2%;
+    }
+}
+
+.parentdiv_class>div{
+    height: 100%;
+    display: flex;
+    width: 35%;
+    background-color: orange;
+    border-radius: 40px;
+    text-align: right;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
