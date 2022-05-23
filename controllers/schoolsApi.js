@@ -17,13 +17,14 @@ const getTotal = async (req, res) => {
   const getTotalCam = async (req, res) => {
  
     try {
-    
       let data = await schools.getSchoolsbyCam();
       console.log(data,"esto es data");
       res.status(200).json(data);
       
     } catch (error) {
       console.log(`ERROR: ${error.stack}`);
+    } finally {
+      return
     }
   };
 

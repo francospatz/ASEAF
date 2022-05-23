@@ -6,14 +6,13 @@ import { Doughnut } from 'react-chartjs-2';
 function PieChart() {
 
   const [schools, setSchools] = useState("");
-  const [schoolscam, setSchoolsCam] = useState([]);
+  
 
   const getTotal2021 = async () => {
     try {
-      console.log('entra en fetch');
-      const res = await axios.get('http://localhost:5000/api/total');
+      
+      const res = await axios.get('/api/total');
       const json = await res.data;
-      console.log(json[0].count, "esto es json");
       setSchools(json[0].count);
       
     } catch (err) {

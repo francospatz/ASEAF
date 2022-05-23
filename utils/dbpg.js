@@ -4,9 +4,9 @@ require('dotenv').config();
 const poolConfig = {
     connectionString: process.env.PG_URL,
     ssl: { rejectUnauthorized: false },
-    connectionTimeoutMillis: 50000,
-    idleTimeoutMillis: 50000,
-    max: 100,
+    connectionTimeoutMillis: 2000,
+    idleTimeoutMillis: 2000,
+    max: 1,
 }
 const pool = new Pool(poolConfig);
 
