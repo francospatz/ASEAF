@@ -38,6 +38,15 @@
 }
 
 .noinscritos{
-    border: 3px solid black;
+    border: 1px solid rgba(176, 171, 171, 0.076);
     margin: 3rem;
+}
+
+button > p{
+    color: black;
+    font-family: 'Nunito';
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-top: 4rem;
+    text-decoration: underline;
 }
