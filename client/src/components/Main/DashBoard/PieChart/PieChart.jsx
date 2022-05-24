@@ -32,22 +32,22 @@ function PieChart() {
       datasets: [
         {
           label: '% Complete',
-          data: [schools, 600],
+          data: [200, 600],
           backgroundColor: [
-            '#E36C35',
-            '#E0E0E0'
+            '#EF6424',
+            '#F1F1F1'
 
           ],
           borderColor: [
-            'yellow',
-            'black'
+            '#FCAE73',
+            'transparent'
           ],
-          borderWidth: 0.2,
-          cutout: 150,
+          borderWidth: 0.5,
+          cutout: 100,
         },
       ],
     };
-    return <Doughnut data={data} />;
+    return <div className='donut_class'><Doughnut data={data} /></div>;
   };
 
   return <div>
