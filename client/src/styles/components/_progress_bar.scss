@@ -1,9 +1,20 @@
 .progress_bar_class {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     box-shadow: 1rem;
+    border-color: black;
     margin-bottom: 3rem;
+    width: 80vw;
+    height: 32rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    border: black;
+    border-radius: 1;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    box-shadow: black;
+    box-shadow: 3px 0px 6px 3px grey;
+    overflow: scroll;
     & p {
         margin-left: 5%;
         margin-bottom: 0.2%;
