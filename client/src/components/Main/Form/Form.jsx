@@ -19,7 +19,7 @@ const Form = () => {
     //Hay que arreglar el envío del form
     const res1 = await axios.post('api/formtodb', obj);
     console.log(res1);
-    const res2 = await axios.get(`api/sendemail/${obj.email}`)
+    const res2 = await axios.get(`api/sendemail/${obj.email}`);
     console.log(res2);
     //console.log(obj,"esto es obj");
   };

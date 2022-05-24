@@ -19,11 +19,11 @@ function PieChart() {
       console.log(err);
     }
     
-  }
+  };
 
   const totalInscribed2021 = () => {
 
-    getTotal2021()
+    getTotal2021();
  
     ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -47,7 +47,7 @@ function PieChart() {
         },
       ],
     };
-    return <Doughnut data={data} />
+    return <Doughnut data={data} />;
   };
 
   return <div>
