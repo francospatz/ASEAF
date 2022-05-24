@@ -57,5 +57,7 @@ const getSchoolsbyCam = async () => {
 
 };
 
+//const insertSchool = async (nombre, telefono, email, provincia, estado)
+
 
 module.exports = { getSchools, getSchoolsbyCam }
