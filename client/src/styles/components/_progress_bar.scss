@@ -3,15 +3,25 @@
     flex-direction: column;
     align-items: stretch;
     box-shadow: 1rem;
+    margin-bottom: 3rem;
     & p {
         margin-left: 5%;
         margin-bottom: 0.2%;
         font-size: 16px;
         font-family: 'Nunito';
-        color: #62676A;
-        
+        color: #62676a9e;
 
     }
+}
+
+.p_desc_class {
+    font-size: 10px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: -2%;
+    font-family: "Nunito";
+    color: #62676A;
+
 }
 
 .parentdiv_class {
@@ -43,20 +53,3 @@
         border-radius:40;
         text-align: 'right';
 }
-
-/* .parentdiv_class>div{
-    height: 100%;
-    display: flex;
-    width: 35%;
-    background-color: orange;
-    border-radius: 40px;
-    text-align: right;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    & span {
-        font-size: 12px;
-    }
-
-} */
