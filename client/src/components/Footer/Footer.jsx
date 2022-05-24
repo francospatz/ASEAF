@@ -17,7 +17,7 @@ return <footer>
       <h3>28011, Madrid</h3>
       <h3>Correo: aseaf@aseaf.org<a href="aseaf@aseaf.org">www.aseaf.org</a></h3>
       <h3>Teléfono: 633 738 461</h3>
-      <h3>Página web: <a href="www.aseaf.org">www.aseaf.org</a></h3>
+      <h3>Página web: <a href="https://www.aseaf.org">www.aseaf.org</a></h3>
     </div>
 
     <h2 className="seguir">SÍGUENOS</h2>
@@ -31,7 +31,7 @@ return <footer>
     <h2 className="seguir">NEWSLETTER</h2>
    <form className="formulariofooter">
     <input type="email" {...register("email")} name="email" placeholder="Correo electronico" required/>
-    <input type="submit" value="Suscribete"/>
+    <input type="submit" value="Suscribete   >"/>
     </form>
 
     <h3 id="asociacion">Asociación estatal de acogimiento familiar. 2022</h3>

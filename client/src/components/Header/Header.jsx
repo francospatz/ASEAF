@@ -16,7 +16,10 @@ const Header = () => {
     return logged ? 
     <button onClick={() => handleLogout() }>Logout</button> 
     :
-    <><Link to="/"><p>Form</p></Link><Link to="/login"><p>Login</p></Link></> ;
+    <>
+      <Link to="/"><p>Form</p></Link>
+      <Link to="/login"><p>Login</p></Link>
+    </> ;
   };
 
   return <div className="header">
@@ -25,3 +28,4 @@ const Header = () => {
 };
 
 export default Header;
+
