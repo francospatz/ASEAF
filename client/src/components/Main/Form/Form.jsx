@@ -38,9 +38,9 @@ const Form = () => {
   };
 
   if(modal) {
-    document.body.classList.add('active-modal')
+    document.body.classList.add('active-modal');
   } else {
-    document.body.classList.remove('active-modal')
+    document.body.classList.remove('active-modal');
   }
 
 

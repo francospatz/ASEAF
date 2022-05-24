@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
   
 const Progress_bar = ({progress}) => {
      
@@ -19,7 +19,7 @@ const Progress_bar = ({progress}) => {
         <span style={progresstext}>{`${progress}%`}</span>
       </div>
     </div>
-    )
-}
+    );
+};
   
 export default Progress_bar;
