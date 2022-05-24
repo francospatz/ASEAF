@@ -26,15 +26,15 @@ const DashBoard = () => {
   }
 
   const rows = [
-    createData('Santa María del Pilar', 159, 6.0, 24, 4.0),
-    createData('Eusebio da Guarda', 237, 9.0, 37, 4.3),
-    createData('Sagrado Corazón de Jesús', 262, 16.0, 24, 6.0),
-    createData('Virgen de Atocha', 305, 3.7, 67, 4.3),
-    createData('Ramiro de Maeztu', 356, 16.0, 49, 3.9),
-    createData('Blanco Amor', 159, 6.0, 24, 4.0),
-    createData('Fernando Wirtz', 237, 9.0, 37, 4.3),
-    createData('Clara Campoamor', 262, 16.0, 24, 6.0),
-    createData('Colegio San Ildefonso', 305, 3.7, 67, 4.3),
+    createData('Santa María del Pilar', '\u260E'),
+    createData('Eusebio da Guarda', '\u260E'),
+    createData('Sagrado Corazón de Jesús', '\u260E'),
+    createData('Virgen de Atocha','\u260E' ),
+    createData('Ramiro de Maeztu','\u260E' ),
+    createData('Blanco Amor', '\u260E'),
+    createData('Fernando Wirtz', '\u260E'),
+    createData('Clara Campoamor', '\u260E'),
+    createData('Colegio San Ildefonso', '\u260E'),
 
   ];
 
@@ -78,8 +78,8 @@ const DashBoard = () => {
     return <div>
       <PieChart/>
       <div className="optionselected">
-      <button onClick={handleCollegue} >Com. Autónoma</button>
-      <button onClick={handleCollegue} >No inscritos</button>
+      <button onClick={handleCollegue} ><p>Comunidad Autónoma</p></button>
+      <button onClick={handleCollegue} ><p>No Inscritos</p></button>
       </div>
       {comaut?
       <div className='progress_bar_class'>
@@ -126,11 +126,11 @@ const DashBoard = () => {
     : <div className="noinscritos">
     <TableContainer component={Paper}>
     <Table sx={{ minWidth: 350 }} aria-label="simple table">
-      <TableHead sx={{ backgroundColor: '#fdebd0'
+      <TableHead sx={{ backgroundColor: '#ffE2d4'
  }}>
         <TableRow>
-          <TableCell sx={{ fontSize: '1.5rem' }}>Colegio</TableCell>
-          <TableCell align="right" sx={{ fontSize: '1.5rem' }}>Contacto</TableCell>
+          <TableCell sx={{ fontSize: '1rem', fontFamily: 'Nunito' }}>Colegio</TableCell>
+          <TableCell align="right" sx={{ fontSize: '1rem', fontFamily: 'Nunito'  }}>Contacto</TableCell>
         </TableRow>
       </TableHead>
       <TableBody sx={{ paddingLeft:"10rem"}}>
@@ -140,8 +140,8 @@ const DashBoard = () => {
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
            
           >
-            <TableCell component="th" scope="row" sx={{ fontSize: '1rem' }}> {row.name}</TableCell>
-            <TableCell align="right" sx={{ fontSize: '1rem', color: '#145a32' }}>{row.calories}</TableCell>
+            <TableCell component="th" scope="row" sx={{ fontSize: '0.8rem', fontFamily: 'Nunito' }}> {row.name}</TableCell>
+            <TableCell align="right" sx={{ fontSize: '0.9rem', fontFamily: 'Nunito', color: '#056447' }}>{row.calories}</TableCell>
             {/* <TableCell align="right">{row.fat}</TableCell> */}
            {/*  <TableCell align="right">{row.carbs}</TableCell>
             <TableCell align="right">{row.protein}</TableCell> */}
