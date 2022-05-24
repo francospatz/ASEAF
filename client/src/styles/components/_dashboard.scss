@@ -3,3 +3,41 @@
     font-family: 'Nunito';
     font-size: 16px;
 }
+
+
+.optionselected{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.optionselected button{
+    background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+   -webkit-appearance: button; /* for input */
+     -moz-user-select: none;
+      -ms-user-select: none;
+        font-weight: bold;
+    }
+
+.optionselected button:active {
+    color:#094E39;
+    text-decoration: underline #094E39;
+    
+   
+}
+
+.noinscritos{
+    border: 3px solid black;
+    margin: 3rem;
+}
