@@ -28,6 +28,21 @@ const getTotal = async (req, res) => {
     }
   };
 
+  const form = async (req, res) => {
+
+    try {
+      const { nombre, telefono, email, provincia, estado } = req.body;
+      let data = await schools.insertSchool(nombre, telefono, email, provincia, estado)
+      res.status(201).json(data)
+    } catch (error) {
+      console.log('Error:', error);
+    }
+  }
+
+
+
   module.exports = {
-    getTotal, getTotalCam
+    getTotal, 
+    getTotalCam,
+    form
   };

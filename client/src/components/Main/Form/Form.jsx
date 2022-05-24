@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 
@@ -9,17 +10,18 @@ const Form = () => {
   const onSubmit = async (data) => {
 
     const obj = {
-      colegio: data.colegio,
-      comaut: data.comaut,
-      provincia: data.Provincia,
-      nombre: data.nombre,
-      apellidos: data.apellidos,
-      email: data.email,
+      nombre: data.colegio,
       telefono: data.telefono,
-      puesto: data.puesto
+      email: data.email,
+      provincia: data.Provincia,
+      estado: data.comaut
     };
-
-    console.log(obj,"esto es obj");
+    //Hay que arreglar el envío del form
+    const res1 = await axios.post('api/formtodb', obj);
+    console.log(res1);
+    const res2 = await axios.get(`api/sendemail/${obj.email}`)
+    console.log(res2);
+    //console.log(obj,"esto es obj");
   };
 
   return (
