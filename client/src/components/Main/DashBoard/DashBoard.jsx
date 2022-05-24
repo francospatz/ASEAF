@@ -26,15 +26,15 @@ const DashBoard = () => {
   }
 
   const rows = [
-    createData('Santa María del Pilar', 159, 6.0, 24, 4.0),
-    createData('Eusebio da Guarda', 237, 9.0, 37, 4.3),
-    createData('Sagrado Corazón de Jesús', 262, 16.0, 24, 6.0),
-    createData('Virgen de Atocha', 305, 3.7, 67, 4.3),
-    createData('Ramiro de Maeztu', 356, 16.0, 49, 3.9),
-    createData('Blanco Amor', 159, 6.0, 24, 4.0),
-    createData('Fernando Wirtz', 237, 9.0, 37, 4.3),
-    createData('Clara Campoamor', 262, 16.0, 24, 6.0),
-    createData('Colegio San Ildefonso', 305, 3.7, 67, 4.3),
+    createData('Santa María del Pilar', '\u260E' , 6.0, 24, 4.0),
+    createData('Eusebio da Guarda', '\u260E', 9.0, 37, 4.3),
+    createData('Sagrado Corazón de Jesús', '\u260E', 16.0, 24, 6.0),
+    createData('Virgen de Atocha', '\u260E', 3.7, 67, 4.3),
+    createData('Ramiro de Maeztu', '\u260E', 16.0, 49, 3.9),
+    createData('Blanco Amor', '\u260E', 6.0, 24, 4.0),
+    createData('Fernando Wirtz', '\u260E', 9.0, 37, 4.3),
+    createData('Clara Campoamor', '\u260E', 16.0, 24, 6.0),
+    createData('Colegio San Ildefonso', '\u260E', 3.7, 67, 4.3),
 
   ];
 
@@ -141,7 +141,7 @@ const DashBoard = () => {
            
           >
             <TableCell component="th" scope="row" sx={{ fontSize: '1rem' }}> {row.name}</TableCell>
-            <TableCell align="right" sx={{ fontSize: '1rem', color: '#145a32' }}>{row.calories}</TableCell>
+            <TableCell align="right" sx={{ fontSize: '1.8rem', color: '#145a32' }}>{row.calories}</TableCell>
             {/* <TableCell align="right">{row.fat}</TableCell> */}
            {/*  <TableCell align="right">{row.carbs}</TableCell>
             <TableCell align="right">{row.protein}</TableCell> */}
