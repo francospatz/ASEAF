@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import PieChart from "./PieChart";
-import Progressbar from "./Progress_bar"
+import Progressbar from "./Progress_bar";
 import { LoggedContext } from "../../../context/loggedContext";
 import axios from 'axios';
 
@@ -24,7 +24,7 @@ const DashBoard = () => {
     } */
 
 
-  }
+  };
 
   const totalCam2021 = () => {
 
@@ -35,9 +35,9 @@ const DashBoard = () => {
       <div>
         <p>{school.estado}</p><Progressbar bgcolor="orange" progress={school.colegios_inscritos}  height={30} />
       </div>
-    ))
+    ));
 
-  }
+  };
 
   //getTotalCam2021()
 
