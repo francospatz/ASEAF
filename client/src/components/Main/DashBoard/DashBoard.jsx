@@ -46,7 +46,7 @@ const DashBoard = () => {
     
     return <div>
       <PieChart/>
-      <h3 className="heading">Colegios inscritos por Comunidad Autónoma</h3>
+      <h3 className="heading">Colegios inscritos por Comunidad Autónoma 2021</h3>
       <div className='progress_bar_class'>
       {/* {totalCam2021()} */}
       <p>Andalucía</p><Progressbar bgcolor="#EF6424" progress='35' />
