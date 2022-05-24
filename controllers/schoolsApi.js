@@ -33,6 +33,7 @@ const getTotal = async (req, res) => {
     try {
       const { nombre, telefono, email, provincia, estado } = req.body;
       let data = await schools.insertSchool(nombre, telefono, email, provincia, estado)
+      res.status(201).json(data)
     } catch (error) {
       console.log('Error:', error);
     }
@@ -43,5 +44,5 @@ const getTotal = async (req, res) => {
   module.exports = {
     getTotal, 
     getTotalCam,
-    //form
+    form
   };
