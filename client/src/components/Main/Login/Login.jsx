@@ -32,6 +32,9 @@ const Form = () => {
     return logged ? <Navigate to='/dashboard'/> : '';
   };
 
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
   return (
       <>
      <form className="formulariologin" onSubmit={handleSubmit(onSubmit)}>
@@ -41,7 +44,6 @@ const Form = () => {
                   <input type="email" {...register("email")} name="email" placeholder="Correo electronico" required  /* onFocus={this.value=''} */ />
                   <input type="password" name="password" autoComplete="on" {...register("password")} placeholder="Password" required />
                  <input type="submit" value="Continuar"/>
-             
           </div>
     </form> 
                 <div className="reccontra">

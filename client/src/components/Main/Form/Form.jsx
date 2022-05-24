@@ -1,12 +1,18 @@
 import axios from "axios";
 import React, {useState} from "react";
 import { useForm } from "react-hook-form";
+import logo1 from '../../../assets/logos/facebook.png';
+import logo2 from '../../../assets/logos/twitter.png';
+import logo3 from '../../../assets/logos/instagram.png';
+import logo4 from '../../../assets/logos/youtube.png';
+import { Link} from 'react-router-dom';
 
 
 const Form = () => {
 
   const { register, handleSubmit } = useForm();
- 
+  const [modal, setModal] = useState(false);
+
   const onSubmit = async (data) => {
 
     const obj = {
@@ -21,12 +27,26 @@ const Form = () => {
     console.log(res1);
     const res2 = await axios.get(`api/sendemail/${obj.email}`);
     console.log(res2);
+    setModal(!modal);
     //console.log(obj,"esto es obj");
+    document.getElementById("formularioaseaf").reset();
+
+  };
+ 
+  const toggleModal = () => {
+    setModal(!modal);
   };
 
+  if(modal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  }
+
+
   return (
-    
-     <form className="formulario" onSubmit={handleSubmit(onSubmit)}>
+    <>
+     <form className="formulario" onSubmit={handleSubmit(onSubmit)}id="formularioaseaf">
             <div className="conjunto">
                   <h2 className="titulo">Participa en el Día del Pijama 2021 rellenando este formulario</h2>
                   <h4 className="subtitle">DATOS DEL COLEGIO QUE SE INSCRIBE</h4>
@@ -61,6 +81,34 @@ const Form = () => {
                   
           </div>
     </form> 
+
+
+      {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <h3>¡Gracias por participar!</h3>
+            <p>
+              Tu colegio se ha inscrito en el Día del Pijama 2022.
+            </p>
+            <p>
+              En breve recibirás un correo con contenido y activiades para que puedas organizar la jornada.
+            </p>
+            <div className="volvermodal">
+            <Link to="/" className="close-modal" onClick={toggleModal}><p>Volver a la web</p></Link>
+            </div>
+            
+            <h4>¡Compártelo!</h4>
+            <div className="logos">
+                <img src={logo1} alt='logo' style={{width: 30}}></img>
+                <img src={logo2} alt='logo' style={{width: 30}}></img>
+                <img src={logo3} alt='logo' style={{width: 30}}></img>
+                <img src={logo4} alt='logo' style={{width: 31}}></img>
+                </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
