@@ -11,6 +11,24 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+import Box from '@mui/material/Box';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import { FixedSizeList } from 'react-window';
+
+function renderRow(props) {
+  const { index, style } = props;
+
+  return (
+    <ListItem style={style} key={index} component="div" disablePadding>
+      <ListItemButton>
+        <ListItemText primary={`Item ${index + 1}`} />
+      </ListItemButton>
+    </ListItem>
+  );
+}
+
 const DashBoard = () => {
   const { logged } = useContext(LoggedContext);
   const [schoolsCam, setSchoolsCam] = useState([]);
