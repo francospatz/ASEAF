@@ -18,7 +18,7 @@ const DashBoard = () => {
 
 
   function handleCollegue() {
-     setComaut(!comaut)
+     setComaut(!comaut);
   }
 
   function createData(name, calories, fat, carbs, protein) {

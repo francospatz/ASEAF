@@ -1,10 +1,11 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import { Link, Navigate } from 'react-router-dom';
 import { LoggedContext } from "../../context/loggedContext";
 import axios from 'axios';
 
 const Header = () => {
   const { logged, setLogged, user, setUser } = useContext(LoggedContext);
+
 
   const handleLogout = async () => {
     await axios.get(`/api/logout/${user}`);
@@ -17,6 +18,7 @@ const Header = () => {
     <button onClick={() => handleLogout() }>Logout</button> 
     :
     <>
+
       <Link to="/"><p>Form</p></Link>
       <Link to="/login"><p>Login</p></Link>
     </> ;
