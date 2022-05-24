@@ -11,6 +11,7 @@ const Header = () => {
     await axios.get(`/api/logout/${user}`);
     setUser('');
     setLogged(false);
+    return !logged ? <Navigate to='/login'/> : '';
   };
 
   const handleLogged = () => {
@@ -18,10 +19,9 @@ const Header = () => {
     <button onClick={() => handleLogout() }>Logout</button> 
     :
     <>
-
       <Link to="/"><p>Form</p></Link>
       <Link to="/login"><p>Login</p></Link>
-    </> ;
+     </>
   };
 
   return <div className="header">
