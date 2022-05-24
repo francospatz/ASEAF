@@ -49,25 +49,25 @@ const DashBoard = () => {
       <h3 className="heading">Colegios inscritos por Comunidad Autónoma</h3>
       <div className='progress_bar_class'>
       {/* {totalCam2021()} */}
-      <p>Andalucía</p><Progressbar bgcolor="orange" progress='35'  height={30} />
-      <p>Aragón</p><Progressbar bgcolor="orange" progress='44'  height={30} />
-      <p>Principado de Asturias</p><Progressbar bgcolor="orange" progress='50'  height={30} />
-      <p>Islas Baleares</p><Progressbar bgcolor="orange" progress='67'  height={30} />
-      <p>Canarias</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>Cantabria</p><Progressbar bgcolor="orange" progress='25'  height={30} />
-      <p>Castilla y León</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>Castilla-La Mancha</p><Progressbar bgcolor="orange" progress='50'  height={30} />
-      <p>Cataluña</p><Progressbar bgcolor="orange" progress='33'  height={30} />
-      <p>Comunidad Valenciana</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>Extremadura</p><Progressbar bgcolor="orange" progress='25'  height={30} />
-      <p>Galicia</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>Comunidad de Madrid</p><Progressbar bgcolor="orange" progress='50'  height={30} />
-      <p>Región de Murcia</p><Progressbar bgcolor="orange" progress='33'  height={30} />
-      <p>Comunidad de Navarra</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>País Vasco</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>La Rioja</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>Ciudad Autónoma de Ceuta</p><Progressbar bgcolor="orange" progress='12'  height={30} />
-      <p>Ciudad Autónoma de Melilla</p><Progressbar bgcolor="orange" progress='12'  height={30} />
+      <p>Andalucía</p><Progressbar bgcolor="#EF6424" progress='35' />
+      <p>Aragón</p><Progressbar bgcolor="#EF6424" progress='44' />
+      <p>Principado de Asturias</p><Progressbar bgcolor="#EF6424" progress='50' />
+      <p>Islas Baleares</p><Progressbar bgcolor="#EF6424" progress='67' />
+      <p>Canarias</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>Cantabria</p><Progressbar bgcolor="#EF6424" progress='25' />
+      <p>Castilla y León</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>Castilla-La Mancha</p><Progressbar bgcolor="#EF6424" progress='50' />
+      <p>Cataluña</p><Progressbar bgcolor="#EF6424" progress='33' />
+      <p>Comunidad Valenciana</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>Extremadura</p><Progressbar bgcolor="#EF6424" progress='25' />
+      <p>Galicia</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>Comunidad de Madrid</p><Progressbar bgcolor="#EF6424" progress='50' />
+      <p>Región de Murcia</p><Progressbar bgcolor="#EF6424" progress='33' />
+      <p>Comunidad de Navarra</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>País Vasco</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>La Rioja</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>Ciudad Autónoma de Ceuta</p><Progressbar bgcolor="#EF6424" progress='45' />
+      <p>Ciudad Autónoma de Melilla</p><Progressbar bgcolor="#EF6424" progress='45' />
 
       </div>
 
