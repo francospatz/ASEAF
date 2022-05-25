@@ -1,25 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
 
-.container {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content:space-around;
-  align-items: center;
-  flex-direction: row;
-}
-
 footer {
   background: #ffe2d5;
   font-family: "Nunito", sans-serif;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
   flex-direction: row;
-  margin-top: 8rem;
+  margin-top: 3rem;
   width: 100vw;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
+
+.container {
+  padding-top: 2rem;
+  // display: flex;
+  // width: 100%;
+  // flex-wrap: wrap;
+  // align-content: center;
+  // justify-content:space-around;
+  // align-items: center;
+  // flex-direction: row;
+  // max-width: 15rem;
+   
+
+
+}
+
 
 #politics {
   color: #056447;
@@ -28,7 +36,7 @@ footer {
   margin-bottom: 2rem;
 }
 .seguir {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 footer h3 {
@@ -62,7 +70,6 @@ footer h2 {
   align-content: center;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 2rem;
 }
 
 .logos img {
@@ -75,7 +82,7 @@ footer h2 {
   width: 20%;
 }
 
-.formulario input {
+.formulariofooter input {
   border: 1px solid #ef6424;
   border-top-left-radius: 10px;
   border-end-start-radius: 10px;
@@ -89,7 +96,7 @@ footer h2 {
   color: #f38d5e;
 }
 
-.formulario input[type=submit]{
+.formulariofooter input[type=submit]{
     background-color: #F38D5E;
     min-width: 10rem;
     height: 3.4rem;
@@ -104,7 +111,7 @@ footer h2 {
 
 #asociacion {
   margin-top: 2.4rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: black;
 }
 
@@ -129,4 +136,12 @@ footer h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+@media only screen and (min-width: 800px) {
+   .container{
+  display: flex;
+  flex-direction: row;
+   }
 }

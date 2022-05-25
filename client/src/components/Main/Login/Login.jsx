@@ -44,23 +44,27 @@ const Form = () => {
             type="email"
             {...register("email")}
             name="email"
+            autoComplete="off"
             placeholder="Correo electronico"
-            required /* onFocus={this.value=''} */
+            required  /* onFocus={this.value=''} */
           />
           <input
             type="password"
             name="password"
-            autoComplete="on"
+            autoComplete="off"
             {...register("password")}
             placeholder="Password"
             required
+            
           />
           <input type="submit" value="Continuar" />
-        </div>
-      </form>
-      <div className="reccontra">
+          <div className="reccontra">
         <a href="http://google.com">Recuperar contraseña</a>
       </div>
+        </div>
+        
+      </form>
+     
       {handleLogin()}
     </AnimatedPage>
   );
