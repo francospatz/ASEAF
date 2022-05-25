@@ -29,6 +29,8 @@ function renderRow(props) {
   );
 }
 
+
+//********************************************      TRAMPEAR DATOS 2021          ******************************************* 
 const DashBoard = () => {
   const { logged } = useContext(LoggedContext);
   const [schoolsCam, setSchoolsCam] = useState([]);

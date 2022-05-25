@@ -92,7 +92,7 @@ const Form = () => {
             </select>
           </div>
           <h4 className="subtitle">CÓDIGO DE AUTENTICACIÓN</h4>
-          <input className="box" type="password" name="CODE" placeholder="Código" required />
+          <input className="box" type="password" autoComplete="off" name="CODE" placeholder="Código" required />
           <div id="locationcheckbox">
             <input type="checkbox" name="acepto" value="acepto" id="inpfinal" />
             <span> Acepto recibir las comunicaciones de ASEAF
