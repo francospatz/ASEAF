@@ -12,7 +12,7 @@ const Footer = () => {
   const { register, handleSubmit } = useForm();
 
   if (pathname === '/login' || pathname === '/dashboard') {
-    return null
+    return null;
   } else {
     return <footer>
       <div className="container">
@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
 
       <div className="card-container">
-        <h2 className="seguir">NEWSLETTER</h2>
+        <h2 id="seguir">NEWSLETTER</h2>
         <form className="formulariofooter">
           
           <input type="email" {...register("email")} name="email" placeholder="Correo electronico" required />
