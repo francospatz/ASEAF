@@ -94,90 +94,82 @@ const Header = () => {
   const handleLogged = () => {
     return logged ?
       <AppBar position="static" color="default">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
 
-          <Typography
-            variant="h6"
-            noWrap
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
 
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#E36C35',
-              textDecoration: 'none',
-            }}
-          >
-            ASEAF
-          </Typography>
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: '#E36C35',
+                textDecoration: 'none',
+              }}
+            >
+              ASEAF
+            </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <React.Fragment key={'left'}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={toggleDrawer('left', true)}
-                color="inherit"
-              >
-                <MenuIcon sx={{color: '#E36C35'}}/>
-              </IconButton>
-              <Drawer
-                anchor={'left'}
-                open={state['left']}
-                onClose={toggleDrawer('left', false)}
-              >
-                {list('left')}
-              </Drawer>
-            </React.Fragment>
-          </Box>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              <React.Fragment key={'left'}>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={toggleDrawer('left', true)}
+                  color="inherit"
+                >
+                  <MenuIcon sx={{ color: '#E36C35' }} />
+                </IconButton>
+                <Drawer
+                  anchor={'left'}
+                  open={state['left']}
+                  onClose={toggleDrawer('left', false)}
+                >
+                  {list('left')}
+                </Drawer>
+              </React.Fragment>
+            </Box>
 
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href=""
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 1,
 
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#E36C35',
-              textDecoration: 'none',
-            }}
-          >
-            ASEAF
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
-              
-              
-              
-              
-              
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: '#E36C35',
+                textDecoration: 'none',
+              }}
+            >
+              ASEAF
+            </Typography>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Button
                 key={3}
                 onClick={() => {
                   handleLogout();
                 }}
                 sx={{ my: 2, color: '#E36C35', display: 'block' }}
-                
+
               >
                 CERRAR SESIÓN
               </Button>
-          </Box>
-
-
-        </Toolbar>
-      </Container>
-    </AppBar>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
       :
       <>
-
         <AppBar position="static" color="default">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -297,10 +289,10 @@ const Header = () => {
   };
 
   return (
-  <>
-    {handleLogged()}
-  </>
-    
+    <>
+      {handleLogged()}
+    </>
+
   );
 };
 
