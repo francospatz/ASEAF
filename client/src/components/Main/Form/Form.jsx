@@ -25,24 +25,40 @@ const Form = () => {
 
   const escuelasTotal = require("../../../schools.json")
   const nombres = escuelasTotal.schools;
-  
+
+  const [error, setError] = useState(false)
+
   const onSubmit = async (data) => {
+    if (comunidades.includes(data.comaut) && provincias.includes(data.Provincia)) {
+      const obj = {
+        nombre: data.colegio,
+        telefono: data.telefono,
+        email: data.email,
+        provincia: data.Provincia,
+        estado: data.comaut
+      };
 
-    const obj = {
-      nombre: data.colegio,
-      telefono: data.telefono,
-      email: data.email,
-      provincia: data.Provincia,
-      estado: data.comaut
-    };
+      const res1 = await axios.post('api/formtodb', obj);
+      //console.log(res1);
+      const res2 = await axios.get(`api/sendemail/${obj.email}`);
+      //console.log(res2);
+      setError(false)
+      setModal(!modal);
+      window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            })
+      document.getElementById("formularioaseaf").reset();
+      
+    } else {
+      setError(true)
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
 
-    const res1 = await axios.post('api/formtodb', obj);
-    console.log(res1);
-    const res2 = await axios.get(`api/sendemail/${obj.email}`);
-    console.log(res2);
-    setModal(!modal);
 
-    document.getElementById("formularioaseaf").reset();
 
   };
 
@@ -77,6 +93,7 @@ const Form = () => {
           <Hint options={provincias} allowEnterFill={true} >
             <input className="box" type="text" {...register("Provincia")} name="Provincia" value={inputText2} onChange={e => setInputText2(e.target.value)} placeholder="Provincia" required />
           </Hint>
+          {error ? <h5 className="error">* Los datos introducidos son incorrectos</h5> : ''}
 
           <h4 className="subtitle">DATOS DEL RESPONSABLE QUE RELLENA EL FORMULARIO</h4>
           <input className="box" type="text"  {...register("nombre")} name="nombre" placeholder="Nombre" required />
