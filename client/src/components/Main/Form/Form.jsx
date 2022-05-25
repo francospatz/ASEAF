@@ -15,6 +15,17 @@ const Form = () => {
   const { register, handleSubmit } = useForm();
   const [modal, setModal] = useState(false);
 
+  const comunidades = ["Andalucía", "Aragón", "Canarias", "Cantabria", "Castilla y León", "Castilla-La Mancha", "Cataluña", "Ceuta", "Comunidad Valenciana", "Comunidad de Madrid", "Extremadura", "Galicia", "Islas Baleares", "La Rioja", "Melilla", "Navarra", "País Vasco", "Principado de Asturias", "Región de Murcia"];
+
+  const provincias = ['Alava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Avila', 'Badajoz', 'Barcelona', 'Burgos', 'Cáceres',
+    'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba', 'La Coruña', 'Cuenca', 'Gerona', 'Granada', 'Guadalajara',
+    'Guipúzcoa', 'Huelva', 'Huesca', 'Islas Baleares', 'Jaén', 'León', 'Lérida', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra',
+    'Orense', 'Palencia', 'Las Palmas', 'Pontevedra', 'La Rioja', 'Salamanca', 'Segovia', 'Sevilla', 'Soria', 'Tarragona',
+    'Santa Cruz de Tenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya', 'Zamora', 'Zaragoza'];
+
+  const escuelasTotal = require("../../../schools.json")
+  const nombres = escuelasTotal.schools;
+  
   const onSubmit = async (data) => {
 
     const obj = {
@@ -24,13 +35,13 @@ const Form = () => {
       provincia: data.Provincia,
       estado: data.comaut
     };
-    
+
     const res1 = await axios.post('api/formtodb', obj);
     console.log(res1);
     const res2 = await axios.get(`api/sendemail/${obj.email}`);
     console.log(res2);
     setModal(!modal);
-    
+
     document.getElementById("formularioaseaf").reset();
 
   };
@@ -45,14 +56,7 @@ const Form = () => {
     document.body.classList.remove('active-modal');
   }
 
-  const comunidades = ["Andalucía", "Aragón", "Canarias", "Cantabria", "Castilla y León", "Castilla-La Mancha", "Cataluña", "Ceuta", "Comunidad Valenciana", "Comunidad de Madrid", "Extremadura", "Galicia", "Islas Baleares", "La Rioja", "Melilla", "Navarra", "País Vasco", "Principado de Asturias", "Región de Murcia"];
-  const provincias = ['Alava','Albacete','Alicante','Almería','Asturias','Avila','Badajoz','Barcelona','Burgos','Cáceres',
-  'Cádiz','Cantabria','Castellón','Ciudad Real','Córdoba','La Coruña','Cuenca','Gerona','Granada','Guadalajara',
-  'Guipúzcoa','Huelva','Huesca','Islas Baleares','Jaén','León','Lérida','Lugo','Madrid','Málaga','Murcia','Navarra',
-  'Orense','Palencia','Las Palmas','Pontevedra','La Rioja','Salamanca','Segovia','Sevilla','Soria','Tarragona',
-  'Santa Cruz de Tenerife','Teruel','Toledo','Valencia','Valladolid','Vizcaya','Zamora','Zaragoza'];
-  const escuelasTotal = require("../../../schools.json")
-  const nombres = escuelasTotal.schools;
+
   const [inputText, setInputText] = useState('');
   const [inputText2, setInputText2] = useState('');
   const [inputText3, setInputText3] = useState('');
@@ -63,15 +67,15 @@ const Form = () => {
         <div className="conjunto">
           <h2 className="titulo">Participa en el Día del Pijama 2021 rellenando este formulario</h2>
           <h4 className="subtitle">DATOS DEL COLEGIO QUE SE INSCRIBE</h4>
-          
+
           <Hint options={nombres} allowEnterFill={true} >
-          <input className="box" type="text" {...register("colegio")} name="colegio" value={inputText3} placeholder="Colegio" onChange={e => setInputText3(e.target.value)} required />
+            <input className="box" type="text" {...register("colegio")} name="colegio" value={inputText3} placeholder="Colegio" onChange={e => setInputText3(e.target.value)} required />
           </Hint>
           <Hint options={comunidades} allowEnterFill={true} >
-          <input className="box" type="text" name="comaut" {...register("comaut")} value={inputText} onChange={e => setInputText(e.target.value)} placeholder="Comunidad Autonoma" required />
+            <input className="box" type="text" name="comaut" {...register("comaut")} value={inputText} onChange={e => setInputText(e.target.value)} placeholder="Comunidad Autonoma" required />
           </Hint>
           <Hint options={provincias} allowEnterFill={true} >
-          <input className="box" type="text" {...register("Provincia")} name="Provincia" value={inputText2} onChange={e => setInputText2(e.target.value)} placeholder="Provincia" required />
+            <input className="box" type="text" {...register("Provincia")} name="Provincia" value={inputText2} onChange={e => setInputText2(e.target.value)} placeholder="Provincia" required />
           </Hint>
 
           <h4 className="subtitle">DATOS DEL RESPONSABLE QUE RELLENA EL FORMULARIO</h4>
@@ -107,7 +111,7 @@ const Form = () => {
       </form>
       <img src={logo5} alt='logo' className="logochildren"></img>
 
-      
+
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
