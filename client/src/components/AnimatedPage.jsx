@@ -15,6 +15,7 @@ const AnimatedPage = ({children}) => {
             animate="animate" 
             exit="exit" 
             transition={{duration: 0.4}}
+            className="animatedPage"
         >
             {children}
         </motion.div>

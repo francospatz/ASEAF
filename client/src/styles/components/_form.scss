@@ -26,8 +26,10 @@
   font-family: 'Nunito', sans-serif;
   font-size: 1.1rem;
   color: black;
-  
+  padding: 0 10px;
+  margin-bottom: 1.2rem;
 }
+
 
 
 ::placeholder {
@@ -50,7 +52,7 @@
 
 .formulario input[type=submit]{
   background-color: #F38D5E;
-  min-width: 17.5rem;
+  min-width: 18.5rem;
   height: 2.8rem;
   color: white;
   font-family: 'Nunito', sans-serif;
@@ -69,16 +71,21 @@
 //   max-width: 19rem;
 // }
 
+#locationcheckbox{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 #puesto{
   margin-top: 5px;
   border: 1px solid #EF6424;
-  min-width: 17.5rem;
+  min-width: 18.3rem;
   min-height: 43px;
-  border-radius: 10px;
-  color: #565656;
+  border-radius: 7px;
+  color: #555555;
   opacity: 1;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 
@@ -119,6 +126,7 @@
     line-height: 1.4;
     background: #f1f1f1;
     padding: 14px 28px;
+    padding-bottom: 35px;
     border-radius: 2rem;
     max-width: 350px;
     display: flex;
@@ -155,6 +163,10 @@
       text-align: center;
     }
 
+    .logochildren{
+     display: none;
+    }
+
  
 
 
@@ -179,5 +191,17 @@
       background: #FCFCFC;
       font-family: 'Nunito', sans-serif;
       font-size: 0.9rem;
+  }
+
+  .logochildren{
+    display: flex;
+  }
+  .animatedPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    border-radius: 20px;
   }
 }
