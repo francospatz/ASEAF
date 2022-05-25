@@ -15,6 +15,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const Header = () => {
   const { logged, setLogged, user, setUser } = useContext(LoggedContext);
@@ -80,6 +81,32 @@ const Header = () => {
     </Box>
   );
 
+  const listAdmin = (anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        <ListItem key={5} disablePadding>
+          <ListItemButton>
+            <ListItemText disableTypography primary={<Button
+                key={3}
+                onClick={() => {
+                  handleLogout();
+                }}
+                sx={{ color: '#E36C35' }}
+
+              >
+                <LogoutIcon sx={{mr: 1}}/>CERRAR SESIÓN
+              </Button>} />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Box>
+  );
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -130,7 +157,7 @@ const Header = () => {
                   open={state['left']}
                   onClose={toggleDrawer('left', false)}
                 >
-                  {list('left')}
+                  {listAdmin('left')}
                 </Drawer>
               </React.Fragment>
             </Box>
@@ -159,10 +186,10 @@ const Header = () => {
                 onClick={() => {
                   handleLogout();
                 }}
-                sx={{ my: 2, color: '#E36C35', display: 'block' }}
+                sx={{ color: '#E36C35' }}
 
               >
-                CERRAR SESIÓN
+                <LogoutIcon sx={{mr: 1}}/>CERRAR SESIÓN
               </Button>
             </Box>
           </Toolbar>
