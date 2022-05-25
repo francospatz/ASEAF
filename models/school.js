@@ -60,17 +60,15 @@ const getSchoolsbyCam = async () => {
 const insertSchool = async (nombre, telefono, email, provincia, estado) => {
   try {
     const client = await pool.connect();
-    if (await client.query(`select * from edicion2022 where nombre like '%${nombre}%'`)) {
-      return
-    } else {
+    
       await client.query(`
       INSERT INTO edicion2022 (id, nombre, telefono, email, provincia, estado)
       VALUES (
-        (SELECT id FROM colegios WHERE lower(nombre) LIKE lower('%${nombre}%') AND lower(provincia) LIKE lower('%${provincia}%') LIMIT(1)),
+        (SELECT id FROM colegios WHERE lower(nombre) LIKE lower('%${nombre}%') LIMIT(1)),
         '${nombre}', '${telefono}', '${email}', '${provincia}', '${estado}')
       `)
     client.release();
-    }
+    
     
   } catch (err) {
     console.log(err);

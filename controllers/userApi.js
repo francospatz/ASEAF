@@ -58,7 +58,7 @@ const sendEmail = async(req, res) => {
             subject: "Acceso al drive informativo",
             html: `<h3>Google Drive</h3>
                 <a href = ${process.env.DRIVE_URL}>Haz clic para ir al Google Drive</a>
-                <p>¡Gracias por apuntarte!</p>
+                <p>¡Gracias por apuntart a tu cole!</p>
                 <p>ASEAF</p>`
         });
         res.status(200).json({

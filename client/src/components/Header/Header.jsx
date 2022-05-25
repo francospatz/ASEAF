@@ -122,7 +122,7 @@ const Header = () => {
 
   const handleLogged = () => {
     return logged ?
-      <AppBar position="static" color="default">
+      <AppBar position="relative" color="default">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -138,6 +138,7 @@ const Header = () => {
                   <MenuIcon sx={{ color: '#E36C35' }} />
                 </IconButton>
                 <Drawer
+                  
                   anchor={'left'}
                   open={state['left']}
                   onClose={toggleDrawer('left', false)}
