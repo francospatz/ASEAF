@@ -6,6 +6,7 @@ import logo2 from '../../../assets/logos/twitter.png';
 import logo3 from '../../../assets/logos/instagram.png';
 import logo4 from '../../../assets/logos/youtube.png';
 import { Link} from 'react-router-dom';
+import AnimatedPage from "../../AnimatedPage";
 
 
 const Form = () => {
@@ -45,7 +46,7 @@ const Form = () => {
 
 
   return (
-    <>
+    <AnimatedPage>
      <form className="formulario" onSubmit={handleSubmit(onSubmit)}id="formularioaseaf">
             <div className="conjunto">
                   <h2 className="titulo">Participa en el Día del Pijama 2021 rellenando este formulario</h2>
@@ -108,7 +109,7 @@ const Form = () => {
           </div>
         </div>
       )}
-    </>
+    </AnimatedPage>
   );
 };
 

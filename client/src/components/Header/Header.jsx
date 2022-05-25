@@ -137,7 +137,7 @@ const Header = () => {
                 textDecoration: 'none',
               }}
             >
-              ASEAF
+              ZOMI
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -178,7 +178,7 @@ const Header = () => {
                 textDecoration: 'none',
               }}
             >
-              ASEAF
+              ZOMI
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Button
@@ -259,7 +259,7 @@ const Header = () => {
               >
                 ASEAF
               </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}} justifyContent="flex-end">
                 <a href="https://www.diadelpijama.org/" className="list__a" target="_blank">
                   <Button
                     key={1}
