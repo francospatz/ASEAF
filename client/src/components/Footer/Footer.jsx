@@ -28,14 +28,6 @@ const Footer = () => {
       </div>
 
       <div className="card-container">
-        <h3 id="asociacion">Asociación estatal de acogimiento familiar. 2022</h3>
-        <div className="asocialogo">
-          <img src={logo5} alt='logo' className="orden__logo"></img>
-          <h3 className="footer__txt">Miembro de la Orden Civil de la Solidaridad Social (cruz de Plata). Enero de 2016</h3>
-        </div>
-      </div>
-
-      <div className="card-container">
         <h2 className="seguir">SÍGUENOS</h2>
         <div className="logos">
           <img src={logo1} alt='logo' style={{ width: 30 }}></img>
@@ -47,7 +39,7 @@ const Footer = () => {
 
       <div className="card-container">
         <h2 className="seguir">NEWSLETTER</h2>
-        <form className="formulario">
+        <form className="formulariofooter">
           
           <input type="email" {...register("email")} name="email" placeholder="Correo electronico" required />
           <input type="submit" value="Suscribete   >"  className="submit-input"/>
@@ -55,10 +47,22 @@ const Footer = () => {
         </form>
       </div>
 
+      <div className="card-container">
+        <h3 id="asociacion">Asociación estatal de acogimiento familiar. 2022</h3>
+        <div className="asocialogo">
+          <img src={logo5} alt='logo' className="orden__logo"></img>
+          <h3 className="footer__txt">Miembro de la Orden Civil de la Solidaridad Social (cruz de Plata). Enero de 2016</h3>
+        </div>
       </div>
+
+     
+
+      
       <div className="bottom-txt">
       <h3 id="politics">Aviso legal | Politica de cookies | Política de privacidad</h3>
       </div>
+      </div>
+     
     </footer>;
   }
 
