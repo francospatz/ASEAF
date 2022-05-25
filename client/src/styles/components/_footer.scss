@@ -1,83 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
 
-footer{
-    background: #FFE2D5;
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 8rem;
+.container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
 }
 
-
-.seguir{
-    font-size: 1.5rem;
-    margin-top: 3rem;
+footer {
+  background: #ffe2d5;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 8rem;
+  width: 100vw;
 }
 
-footer h3{
-    color: grey;
-    font-size: 1.1rem;
-    margin: 0 0;
-    margin-left: 2rem;
+#politics {
+  color: #056447;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.seguir {
+  font-size: 1.5rem;
 }
 
-footer a{
-    text-decoration: none;
-    color: #056447;
-    margin-left: 0.5rem;
+footer h3 {
+  color: grey;
+  font-size: 0.8rem;
+  margin: 0 0;
 }
 
-
-
-footer h2{
-    font-size: 1.4rem;
-    margin-left: 2rem;
+footer a {
+  text-decoration: none;
+  color: #056447;
+}
+.footer__txt {
+  max-width: 50%;
 }
 
-.logos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 2rem;
+footer h2 {
+  font-size: 1rem;
 }
 
-.logos img{
-    margin-right: 2rem;
+.card-container {
+  width: 290px;
+  margin: 1.2%;
+  top: 0;
 }
 
-.formulariofooter{
-    display: flex;
-    flex-direction: row;
-    margin-left: 2rem;
+.logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2rem;
 }
 
-.formulariofooter input{
-    border: 1px solid #EF6424;
-    border-top-left-radius: 10px;
-    border-end-start-radius: 10px;
-    min-width: 14rem;
-    height: 2.6rem;
-    background: #FCFCFC;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
-    padding: 5px;
-    margin-bottom: 1rem; 
-    padding-left: 1.5rem;
+.logos img {
+  margin-right: 2rem;
 }
 
-.formulariofooter ::placeholder{
-    color: #F38D5E;
+.formulariofooter {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
 }
 
+.formulario input {
+  border: 1px solid #ef6424;
+  border-top-left-radius: 10px;
+  border-end-start-radius: 10px;
+  background: #fcfcfc;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  
+}
 
-.formulariofooter input[type=submit]{
+.formulario::placeholder {
+  color: #f38d5e;
+}
+
+.formulario input[type=submit]{
     background-color: #F38D5E;
     min-width: 10rem;
     height: 3.4rem;
@@ -90,27 +102,31 @@ footer h2{
     border-end-start-radius: 0px;
   }
 
-  #asociacion{
-    margin-top: 2rem;
-    font-size: 1.3rem;
-    color: black;
+#asociacion {
+  margin-top: 2.4rem;
+  font-size: 1.3rem;
+  color: black;
 }
 
-  .asocialogo{
-      display: flex;
-      flex-direction: row;
-      margin-top: 2rem;
-  }
+.asocialogo {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
 
-  .asocialogo img{
-      min-width: 5rem;
-      margin-left: 2rem;
-      margin-right: 2.5rem;
-  }
+.asocialogo img {
+  min-width: 5rem;
+  margin-left: 2rem;
+  margin-right: 2.5rem;
+}
 
-  #politics{
-    color: #056447;
-    font-size: 1.2rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-  }
+.orden__logo {
+  width: auto;
+  height: 70%;
+}
+
+.bottom-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
