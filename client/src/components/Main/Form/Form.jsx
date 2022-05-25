@@ -23,13 +23,13 @@ const Form = () => {
       provincia: data.Provincia,
       estado: data.comaut
     };
-    //Hay que arreglar el envío del form
+    
     const res1 = await axios.post('api/formtodb', obj);
     console.log(res1);
     const res2 = await axios.get(`api/sendemail/${obj.email}`);
     console.log(res2);
     setModal(!modal);
-    //console.log(obj,"esto es obj");
+    
     document.getElementById("formularioaseaf").reset();
 
   };
