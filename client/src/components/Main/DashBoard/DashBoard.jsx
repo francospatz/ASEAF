@@ -10,7 +10,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import AnimatedPage from "../../AnimatedPage";
 import Box from '@mui/material/Box';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -93,7 +93,7 @@ const DashBoard = () => {
   if (logged) {
     // Dentro de este return irán todas las gráficas
     
-    return <div>
+    return <AnimatedPage>
       <PieChart/>
       <div className="optionselected">
       <button onClick={handleCollegue} ><p>Comunidad Autónoma</p></button>
@@ -170,7 +170,7 @@ const DashBoard = () => {
   </TableContainer>
     </div>
   }
-    </div>;
+    </AnimatedPage>;
  }  else {
     // Este return lo devuelve si el usuario no está logeado
     return <div>
