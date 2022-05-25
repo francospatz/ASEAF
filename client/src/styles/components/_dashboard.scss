@@ -23,10 +23,10 @@
   line-height: normal;
   overflow: visible;
   padding: 0;
-  -webkit-user-select: none; /* for button */
-   -webkit-appearance: button; /* for input */
-     -moz-user-select: none;
-      -ms-user-select: none;
+  --webkit-user-select: none; /* for button */
+   --webkit-appearance: button; /* for input */
+     --moz-user-select: none;
+      --ms-user-select: none;
         font-weight: bold;
     }
 
@@ -39,14 +39,28 @@
 
 .noinscritos{
     border: 1px solid rgba(176, 171, 171, 0.076);
-    margin: 3rem;
+    margin: left;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 0;
 }
+
 
 button > p{
     color: black;
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-size: 1rem;
     margin-bottom: 0;
-    margin-top: 4rem;
-    text-decoration: underline;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+.h1_class{
+    position: absolute;
+    margin-left: 11rem;
+    margin-top: 10rem;
+    font-size: 4rem;
+    font-family: 'Nunito';
 }
