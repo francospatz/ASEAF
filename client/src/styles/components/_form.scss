@@ -126,6 +126,7 @@
     line-height: 1.4;
     background: #f1f1f1;
     padding: 14px 28px;
+    padding-bottom: 35px;
     border-radius: 2rem;
     max-width: 350px;
     display: flex;
@@ -162,6 +163,10 @@
       text-align: center;
     }
 
+    .logochildren{
+     display: none;
+    }
+
  
 
 
@@ -186,5 +191,17 @@
       background: #FCFCFC;
       font-family: 'Nunito', sans-serif;
       font-size: 0.9rem;
+  }
+
+  .logochildren{
+    display: flex;
+  }
+  .animatedPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    border-radius: 20px;
   }
 }

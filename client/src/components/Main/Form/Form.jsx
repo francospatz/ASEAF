@@ -7,6 +7,7 @@ import logo3 from '../../../assets/logos/instagram.png';
 import logo4 from '../../../assets/logos/youtube.png';
 import { Link} from 'react-router-dom';
 import AnimatedPage from "../../AnimatedPage";
+import logo5 from '../../../assets/logos/children.png';
 
 
 const Form = () => {
@@ -81,7 +82,10 @@ const Form = () => {
                         <input type="submit" value="Enviar"/>
                   
           </div>
+             
+            
     </form> 
+                  <img src={logo5} alt='logo' className="logochildren"></img>
 
 
       {modal && (
