@@ -16,6 +16,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
+import zomiLogo from '../../assets/logos/logoZomi.png';
+import aseafLogo from '../../assets/logos/aseafLogo.png';
 
 const Header = () => {
   const { logged, setLogged, user, setUser } = useContext(LoggedContext);
@@ -123,23 +125,6 @@ const Header = () => {
       <AppBar position="static" color="default">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-
-            <Typography
-              variant="h6"
-              noWrap
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: '#E36C35',
-                textDecoration: 'none',
-              }}
-            >
-              ZOMI
-            </Typography>
-
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <React.Fragment key={'left'}>
                 <IconButton
@@ -161,7 +146,7 @@ const Header = () => {
                 </Drawer>
               </React.Fragment>
             </Box>
-
+            <img src={zomiLogo} alt="ZOMI" />
             <Typography
               variant="h5"
               noWrap
@@ -178,9 +163,9 @@ const Header = () => {
                 textDecoration: 'none',
               }}
             >
-              ZOMI
+              
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}} justifyContent="flex-end">
               <Button
                 key={3}
                 onClick={() => {
@@ -200,25 +185,6 @@ const Header = () => {
         <AppBar position="static" color="default">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
-                sx={{
-                  mr: 2,
-                  display: { xs: 'none', md: 'flex' },
-
-                  fontWeight: 700,
-                  letterSpacing: '.3rem',
-                  color: '#E36C35',
-                  textDecoration: 'none',
-                }}
-              >
-                ASEAF
-              </Typography>
-
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <React.Fragment key={'left'}>
                   <IconButton
@@ -240,7 +206,7 @@ const Header = () => {
                   </Drawer>
                 </React.Fragment>
               </Box>
-
+              <img src={aseafLogo} alt="ASEAF" />
               <Typography
                 variant="h5"
                 noWrap
@@ -257,7 +223,7 @@ const Header = () => {
                   textDecoration: 'none',
                 }}
               >
-                ASEAF
+                
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}} justifyContent="flex-end">
                 <a href="https://www.diadelpijama.org/" className="list__a" target="_blank">
@@ -307,8 +273,6 @@ const Header = () => {
                   </Button>
                 </Link>
               </Box>
-
-
             </Toolbar>
           </Container>
         </AppBar>
