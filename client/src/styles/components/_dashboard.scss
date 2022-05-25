@@ -61,6 +61,10 @@ button > p:hover{
     cursor: pointer;
 }
 
+button > p:active{
+   color: #094E39;
+}
+
 .h1_class{
     position: absolute;
     margin-top: 8rem;
