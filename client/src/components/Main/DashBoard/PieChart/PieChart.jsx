@@ -48,7 +48,7 @@ function PieChart() {
     ChartJS.register(ArcElement, Tooltip, Legend);
 
     const data = {
-      labels: [/* 'Colegios Inscritos 2021' */],
+      labels: [`Colegios Inscritos ${year}`], 
       datasets: [
         {
           label: '% Complete',
@@ -65,12 +65,13 @@ function PieChart() {
 
           ],
           borderWidth: 0.5,
-          cutout: 100,
+          cutout: 95,
           
         },
       ],
     };
     return <div>
+      <h5 className='h5_class'>Colegios Inscritos</h5>
     <div><FormControl sx={{ m: 2, fontFamily: 'Nunito', minWidth: 80, color:'yellow' }} size="small">
     <InputLabel sx={{ color:'grey' }}id="demo-select-small">Año</InputLabel>
     <Select sx={{ fontFamily: 'Nunito', color:'#EF6424', fontSize:'0.9rem' }}

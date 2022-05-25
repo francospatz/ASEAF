@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
 .heading {
     margin: 5%;
     font-family: 'Nunito';
@@ -63,10 +67,20 @@ button > p:hover{
 
 .h1_class{
     position: absolute;
-    margin-top: 6rem;
+    margin-top: 7rem;
     font-size: 3rem;
     font-family: "Nunito";
     width: 77%;
     text-align: center;
     font-weight: normal;
+    color: #62676A;
+}
+
+.h5_class{
+    font-size: 1.1rem;
+    font-family: 'Nunito';
+    color: #090C1F;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    letter-spacing: 0.02em
 }
