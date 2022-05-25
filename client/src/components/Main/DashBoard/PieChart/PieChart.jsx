@@ -37,7 +37,7 @@ function PieChart() {
     ChartJS.register(ArcElement, Tooltip, Legend);
 
     const data = {
-      labels: ['Colegios Inscritos 2020','Colegios Inscritos 2021', 'Colegios Inscritos 2022' ],
+      labels: ['Colegios Inscritos 2021'],
       datasets: [
         {
           label: '% Complete',
@@ -45,13 +45,12 @@ function PieChart() {
           backgroundColor: [
             '#EF6424',
             '#F1F1F1', 
-            '#789086'
 
           ],
           borderColor: [
-            '#FCAE73',
-            '#FCAE73',
-            '#FCAE73'
+            'transparent',
+            'transparent',
+          
 
           ],
           borderWidth: 0.5,
