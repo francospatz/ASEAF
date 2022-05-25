@@ -15,15 +15,7 @@ footer {
 
 .container {
   padding-top: 2rem;
-  // display: flex;
-  // width: 100%;
-  // flex-wrap: wrap;
-  // align-content: center;
-  // justify-content:space-around;
-  // align-items: center;
-  // flex-direction: row;
-  // max-width: 15rem;
-   
+
 
 
 }
@@ -31,12 +23,14 @@ footer {
 
 #politics {
   color: #056447;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-.seguir {
-  font-size: 1.1rem;
+#seguir {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 footer h3 {
@@ -54,7 +48,7 @@ footer a {
 }
 
 footer h2 {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 .card-container {
@@ -70,6 +64,8 @@ footer h2 {
   align-content: center;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 2rem;
+    margin-top: 1.5rem;
 }
 
 .logos img {
@@ -88,7 +84,10 @@ footer h2 {
   border-end-start-radius: 10px;
   background: #fcfcfc;
   font-family: "Nunito", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  min-width: 10rem;
+    max-height: 3rem;
+    padding-left: 0.5rem;
   
 }
 
@@ -102,7 +101,7 @@ footer h2 {
     height: 3.4rem;
     color: white;
     font-family: 'Nunito', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     border-top-right-radius: 10px;
     border-end-end-radius: 10px;
     border-top-left-radius: 0px;
@@ -141,7 +140,59 @@ footer h2 {
 
 @media only screen and (min-width: 800px) {
    .container{
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
    }
+
+   .formulariofooter input {
+    width: 11rem;
+    
+  }
+  .formulariofooter input[type=submit] {
+    background-color: #F38D5E;
+    min-width: 7rem;
+    height: 3.4rem;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.0rem;
+    border-top-right-radius: 10px;
+    border-end-end-radius: 10px;
+    border-top-left-radius: 0px;
+    border-end-start-radius: 0px;
+}
+
+.card-container {
+  width: 19rem;
+  margin: 1.2%;
+  top: 0;
+}
+
+.card-container h2{
+  margin-bottom: 1rem;
+}
+
+.asocialogo img {
+  min-width: 5rem;
+  margin-left: 0;
+  margin-right: 2.5rem;
+}
+
+#seguir{
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.logos{
+  margin-top: 2rem;
+}
+
+#contacth2{
+  margin-bottom: 2rem;
+}
+
 }
