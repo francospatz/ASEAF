@@ -11,18 +11,31 @@ import Select from '@mui/material/Select';
 function PieChart() {
 
   const [schools, setSchools] = useState("");
-  const [year, setYear] = React.useState('');
+  const [year, setYear] = useState('');
+  const [percentage, setPercentage] = useState("");
   
   const handleChange = (event) => {
-    setYear(event.target.value);
+    console.log(event.target.value)
+    setYear(event.target.value)
+    getTotal2021(event.target.value);
+    
   };
 
-  const getTotal2021 = async () => {
+  const getTotal2021 = async (value) => {
     try {
-      
-      const res = await axios.get('/api/total');
-      const json = await res.data;
-      setSchools(json[0].count);
+      console.log(value);
+      if (value == 2020) {
+        setPercentage('30%')
+        setSchools('1800')
+      } else if (value == 2021) {
+        const res = await axios.get('/api/total');
+        const json = await res.data;
+        setSchools(json[0].count);
+        setPercentage(Math.floor(json[0].count*100/6000)+'%');
+      } else if (value == 2022) {
+        setPercentage('67%')
+        setSchools('4020')
+      }
       
     } catch (err) {
       console.log(err);
@@ -32,8 +45,6 @@ function PieChart() {
 
   const totalInscribed2021 = () => {
 
-    getTotal2021();
- 
     ChartJS.register(ArcElement, Tooltip, Legend);
 
     const data = {
@@ -41,7 +52,7 @@ function PieChart() {
       datasets: [
         {
           label: '% Complete',
-          data: [200, 600, 300],
+          data: [schools, 6000],
           backgroundColor: [
             '#EF6424',
             '#F1F1F1', 
@@ -68,13 +79,18 @@ function PieChart() {
       label="Año"
       onChange={handleChange}
     >
-      <MenuItem value={8}><p className='par_class'>2020</p></MenuItem>
-      <MenuItem value={9}><p className='par_class'>2021</p></MenuItem>
-      <MenuItem value={10}><p className='par_class'>2022</p></MenuItem>
+      <MenuItem value={2020}><p className='par_class'>2020</p></MenuItem>
+      <MenuItem value={2021}><p className='par_class'>2021</p></MenuItem>
+      <MenuItem value={2022}><p className='par_class'>2022</p></MenuItem>
     </Select>
   </FormControl></div>
-  <h1 className='h1_class'>13%</h1>
+  <h1 className='h1_class'>{percentage}</h1>
   <div className='donut_class'><Doughnut data={data} /></div>
+
+  <div className='box_text'>
+  <p className='p_class'>{schools}</p>
+  <p className='p_coleg_class'>inscritos</p>
+  </div>
   </div>;
   };
 
