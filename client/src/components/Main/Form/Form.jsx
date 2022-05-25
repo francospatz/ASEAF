@@ -8,6 +8,7 @@ import logo4 from '../../../assets/logos/youtube.png';
 import { Link } from 'react-router-dom';
 import AnimatedPage from "../../AnimatedPage";
 import logo5 from '../../../assets/logos/children.png';
+import { Modal } from 'react-animated-modal';
 
 const Form = () => {
 
@@ -23,13 +24,13 @@ const Form = () => {
       provincia: data.Provincia,
       estado: data.comaut
     };
-    //Hay que arreglar el envío del form
+    
     const res1 = await axios.post('api/formtodb', obj);
     console.log(res1);
     const res2 = await axios.get(`api/sendemail/${obj.email}`);
     console.log(res2);
     setModal(!modal);
-    //console.log(obj,"esto es obj");
+    
     document.getElementById("formularioaseaf").reset();
 
   };
@@ -53,7 +54,7 @@ const Form = () => {
           <h4 className="subtitle">DATOS DEL COLEGIO QUE SE INSCRIBE</h4>
           
 
-          <input className="box" type="text" {...register("colegio")} name="colegio" placeholder="Colegio" required onfocus="this.value=''" />
+          <input className="box" type="text" {...register("colegio")} name="colegio" placeholder="Colegio" required />
 
           <input className="box" type="text" name="comaut" {...register("comaut")} placeholder="Comunidad Autonoma" required />
 
@@ -92,7 +93,7 @@ const Form = () => {
       </form>
       <img src={logo5} alt='logo' className="logochildren"></img>
 
-
+      
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
