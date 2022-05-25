@@ -57,10 +57,15 @@ button > p{
     font-weight: normal;
 }
 
+button > p:hover{
+    cursor: pointer;
+}
+
 .h1_class{
     position: absolute;
-    margin-left: 11rem;
-    margin-top: 10rem;
+    margin-top: 8rem;
     font-size: 4rem;
-    font-family: 'Nunito';
+    font-family: "Nunito";
+    width: 100%;
+    text-align: center;
 }
