@@ -48,7 +48,7 @@ function PieChart() {
     ChartJS.register(ArcElement, Tooltip, Legend);
 
     const data = {
-      labels: ['Colegios Inscritos 2021'],
+      labels: [`Colegios Inscritos ${year}`],
       datasets: [
         {
           label: '% Complete',
