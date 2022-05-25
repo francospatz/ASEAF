@@ -1,14 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 require('./utils/dbmongo');
 const usersRouter = require('./routes/userApi');
 const schoolsRouter = require('./routes/schoolsApi');
 
 const app = express();
-const port = process.env.PORT || 5000;
 
+const port = process.env.PORT || 5000;
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(cors());

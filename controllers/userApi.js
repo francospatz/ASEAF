@@ -32,6 +32,7 @@ const login = async(req, res) => {
                     msg:'Autentificación correcta.',
                     token: token,
                 });
+                
             }else {
                 res.status(400).json({ msg: 'Usuario o contraseña incorrectos.'});
             }
