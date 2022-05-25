@@ -8,7 +8,7 @@ import logo4 from '../../../assets/logos/youtube.png';
 import { Link } from 'react-router-dom';
 import AnimatedPage from "../../AnimatedPage";
 import logo5 from '../../../assets/logos/children.png';
-import { Modal } from 'react-animated-modal';
+import { Hint } from 'react-autocomplete-hint';
 
 const Form = () => {
 
@@ -45,6 +45,17 @@ const Form = () => {
     document.body.classList.remove('active-modal');
   }
 
+  const comunidades = ["Andalucía", "Aragón", "Canarias", "Cantabria", "Castilla y León", "Castilla-La Mancha", "Cataluña", "Ceuta", "Comunidad Valenciana", "Comunidad de Madrid", "Extremadura", "Galicia", "Islas Baleares", "La Rioja", "Melilla", "Navarra", "País Vasco", "Principado de Asturias", "Región de Murcia"];
+  const provincias = ['Alava','Albacete','Alicante','Almería','Asturias','Avila','Badajoz','Barcelona','Burgos','Cáceres',
+  'Cádiz','Cantabria','Castellón','Ciudad Real','Córdoba','La Coruña','Cuenca','Gerona','Granada','Guadalajara',
+  'Guipúzcoa','Huelva','Huesca','Islas Baleares','Jaén','León','Lérida','Lugo','Madrid','Málaga','Murcia','Navarra',
+  'Orense','Palencia','Las Palmas','Pontevedra','La Rioja','Salamanca','Segovia','Sevilla','Soria','Tarragona',
+  'Santa Cruz de Tenerife','Teruel','Toledo','Valencia','Valladolid','Vizcaya','Zamora','Zaragoza'];
+  const escuelasTotal = require("../../../schools.json")
+  const nombres = escuelasTotal.schools;
+  const [inputText, setInputText] = useState('');
+  const [inputText2, setInputText2] = useState('');
+  const [inputText3, setInputText3] = useState('');
 
   return (
     <AnimatedPage>
@@ -53,12 +64,15 @@ const Form = () => {
           <h2 className="titulo">Participa en el Día del Pijama 2021 rellenando este formulario</h2>
           <h4 className="subtitle">DATOS DEL COLEGIO QUE SE INSCRIBE</h4>
           
-
-          <input className="box" type="text" {...register("colegio")} name="colegio" placeholder="Colegio" required />
-
-          <input className="box" type="text" name="comaut" {...register("comaut")} placeholder="Comunidad Autonoma" required />
-
-          <input className="box" type="text" {...register("Provincia")} name="Provincia" placeholder="Provincia" required />
+          <Hint options={nombres} allowEnterFill={true} >
+          <input className="box" type="text" {...register("colegio")} name="colegio" value={inputText3} placeholder="Colegio" onChange={e => setInputText3(e.target.value)} required />
+          </Hint>
+          <Hint options={comunidades} allowEnterFill={true} >
+          <input className="box" type="text" name="comaut" {...register("comaut")} value={inputText} onChange={e => setInputText(e.target.value)} placeholder="Comunidad Autonoma" required />
+          </Hint>
+          <Hint options={provincias} allowEnterFill={true} >
+          <input className="box" type="text" {...register("Provincia")} name="Provincia" value={inputText2} onChange={e => setInputText2(e.target.value)} placeholder="Provincia" required />
+          </Hint>
 
           <h4 className="subtitle">DATOS DEL RESPONSABLE QUE RELLENA EL FORMULARIO</h4>
           <input className="box" type="text"  {...register("nombre")} name="nombre" placeholder="Nombre" required />

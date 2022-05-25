@@ -24,7 +24,6 @@ const Form = () => {
       setUser(data.email);
     }
 
-    console.log(obj, "esto es obj");
   };
 
   const handleLogin = () => {

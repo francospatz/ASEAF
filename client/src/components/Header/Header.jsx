@@ -175,7 +175,7 @@ const Header = () => {
                 sx={{ color: '#E36C35' }}
 
               >
-                <LogoutIcon sx={{mr: 1}}/>CERRAR SESIÓN
+                <LogoutIcon sx={{mr: 1}}/>Cerrar sesión
               </Button>
             </Box>
           </Toolbar>
