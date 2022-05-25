@@ -1,8 +1,22 @@
 .donut_class{
     display: flex;
-    width: 20rem;
+    width: 16rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+.chart_box{
+    width: 76%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: flex-end;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    box-shadow: 0px 4px 15px 9px rgb(81 69 159 / 9%);
+    padding: 11% 2%;
+    border-radius: 8px;
 }
 
 .par_class {
@@ -13,6 +27,23 @@
 
 }
 
-/* .p_class {
-    
-} */
+.box_text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    position: absolute;
+    margin-top: -19rem;
+    margin-left: 1rem;
+    align-items: baseline;
+    & .p_class{
+        font-family: 'Nunito';
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-right: 0.2rem;
+        color: #62676A;
+    } & .p_coleg_class{
+        font-family: 'Nunito';
+        font-size: 0.8rem;
+        color: #ADAFB4;
+    }
+}
