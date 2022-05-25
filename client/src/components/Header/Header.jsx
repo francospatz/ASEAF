@@ -206,7 +206,7 @@ const Header = () => {
                   </Drawer>
                 </React.Fragment>
               </Box>
-              <img src={aseafLogo} alt="ASEAF" />
+              <img src={aseafLogo} alt="ASEAF" height={35}/>
               <Typography
                 variant="h5"
                 noWrap

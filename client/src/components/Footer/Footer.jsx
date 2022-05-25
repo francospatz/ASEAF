@@ -5,12 +5,16 @@ import logo3 from '../../assets/logos/instagram.png';
 import logo4 from '../../assets/logos/youtube.png';
 import logo5 from '../../assets/logos/escudo.png';
 import { useForm } from "react-hook-form";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
-  
+  const { pathname } = useLocation();
   const { register, handleSubmit } = useForm();
 
-return <footer>
+  if(pathname === '/login' || pathname === '/dashboard') {
+    return null
+  } else {
+    return <footer>
     <h2 id="contacth2" >CONTACTO</h2>
     <div>
       <h3>C/ Saavedra Fajardo, 5 y 7.</h3>
@@ -44,6 +48,9 @@ return <footer>
     <h3 id="politics">Aviso legal | Politica de cookies | Política de privacidad</h3>
  
   </footer>;
+  }
+
+
 };
 
 export default Footer;
