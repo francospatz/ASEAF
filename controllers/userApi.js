@@ -9,7 +9,6 @@ const login = async(req, res) => {
     try {
         const {email, password} = req.body
         data = await User.findOne({'email': email}, '-_id -__v');
-        console.log(data)
         if(!data){
             res.status(400).json({ msg: 'Usuario o contraseña incorrectos.'}); 
         }else{
