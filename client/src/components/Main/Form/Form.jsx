@@ -57,9 +57,6 @@ const Form = () => {
         behavior: "smooth"
       })
     }
-
-
-
   };
 
   const toggleModal = () => {

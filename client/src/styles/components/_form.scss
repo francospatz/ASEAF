@@ -30,7 +30,10 @@
   margin-bottom: 1.2rem;
 }
 
-
+.a{
+  text-decoration: underline;
+  color:#094E39
+}
 
 ::placeholder {
   color:#555555;
@@ -48,6 +51,12 @@
   font-family: 'Nunito', sans-serif;
   color: #094E39;
 
+}
+.subtitle2{
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: #555555;
+  font-size:smaller;
 }
 
 .formulario input[type=submit]{
