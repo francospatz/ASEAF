@@ -103,8 +103,10 @@ const DashBoard = () => {
       <button onClick={handleCollegue} ><p>Comunidad Autónoma</p></button>
       <button onClick={handleCollegue} ><p>No Inscritos</p></button>
       </div>
-      {/* <input className="boxfind" type="text" name="nombre" placeholder="&#128269; Busca colegio" required/> */}
-      <input className="boxfind" type="text" name="nombre" placeholder="Busca colegio" required/>
+       <div className="inputcontainer">
+       <input className="boxfind" type="text" name="nombre" placeholder="Busca colegio" required/>
+       </div>
+      
       {comaut?
       <div className='progress_bar_class'>
       <p>Andalucía</p><Progressbar bgcolor="#EF6424" progress='35' />
