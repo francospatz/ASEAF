@@ -96,6 +96,7 @@ const DashBoard = () => {
     // Dentro de este return irán todas las gráficas
     
     return <AnimatedPage>
+      <div className='datadiv'>
       <PieChart/>
       <div className="optionselected">
       <button onClick={handleCollegue} ><p>Comunidad Autónoma</p></button>
@@ -172,6 +173,7 @@ const DashBoard = () => {
   </TableContainer>
     </div>
   }
+  </div>
     </AnimatedPage>;
  }  else {
     // Este return lo devuelve si el usuario no está logeado
