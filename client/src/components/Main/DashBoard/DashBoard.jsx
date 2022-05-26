@@ -16,6 +16,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { FixedSizeList } from 'react-window';
+import logo from '../../../assets/logos/lupa.png';
 
 function renderRow(props) {
   const { index, style } = props;
@@ -102,6 +103,8 @@ const DashBoard = () => {
       <button onClick={handleCollegue} ><p>Comunidad Autónoma</p></button>
       <button onClick={handleCollegue} ><p>No Inscritos</p></button>
       </div>
+      {/* <input className="boxfind" type="text" name="nombre" placeholder="&#128269; Busca colegio" required/> */}
+      <input className="boxfind" type="text" name="nombre" placeholder="Busca colegio" required/>
       {comaut?
       <div className='progress_bar_class'>
       <p>Andalucía</p><Progressbar bgcolor="#EF6424" progress='35' />

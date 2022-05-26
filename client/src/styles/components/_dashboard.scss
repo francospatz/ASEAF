@@ -87,6 +87,28 @@ button > p:hover{
     letter-spacing: 0.02em
 }
 
+
+.boxfind{
+    border: 2px solid #EF6424;
+    border-radius: 7px;
+    min-width: 17rem;
+    height: 2.7rem;
+    background: #FCFCFC;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    color: black;
+    padding: 0 10px;
+    margin-bottom: 2.4rem;
+    margin-left: 3.7rem;
+    background-image: url('./../../assets/logos/glass.svg');
+    background-repeat: no-repeat;
+    background-position: 10px 14px;
+    padding-left: 13px;
+}  
+
+.boxfind::placeholder{
+    padding-left: 19px;
+
 @media only screen and (min-width: 800px) {
     .h1_class{
     position: absolute;
@@ -99,5 +121,5 @@ button > p:hover{
     color: #62676A;
     }
 
-    
+
 }
