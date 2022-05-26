@@ -16,7 +16,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { FixedSizeList } from 'react-window';
-import logo from '../../../assets/logos/lupa.png';
+
 
 function renderRow(props) {
   const { index, style } = props;
@@ -35,9 +35,15 @@ function renderRow(props) {
 const DashBoard = () => {
   const { logged } = useContext(LoggedContext);
   const [comaut, setComaut] = useState(true);
+  const [noInsc, setNoInsc] = useState(false);
 
   function handleCollegue() {
-    setComaut(!comaut);
+    setComaut(true);
+    setNoInsc(false);
+  }
+  function handleCollegue2() {
+    setComaut(false);
+    setNoInsc(true);
   }
 
   function createData(name, calories, fat, carbs, protein) {
@@ -66,13 +72,12 @@ const DashBoard = () => {
         <PieChart />
         <div>
           <div className="optionselected">
-            <button onClick={handleCollegue} ><p>Comunidad Autónoma</p></button>
-            <button onClick={handleCollegue} ><p>No Inscritos</p></button>
+            <button onClick={handleCollegue}  ><p style={{borderBottom: comaut ? '1px solid currentColor' : ''}}>Comunidad Autónoma</p></button>
+            <button onClick={handleCollegue2} ><p style={{borderBottom: noInsc ? '1px solid currentColor' : ''}}>No Inscritos</p></button>
           </div>
           <div className="inputcontainer">
             <input className="boxfind" type="text" name="nombre" placeholder="Busca colegio" required />
           </div>
-
           {comaut ?
             <div className='progress_bar_class'>
               <p>Andalucía</p><Progressbar bgcolor="#EF6424" progress='7' />
@@ -115,7 +120,10 @@ const DashBoard = () => {
               <h5 className='p_desc_class'>8 de 132 colegios</h5>
 
             </div>
-            : <div className="noinscritos">
+            : ""
+            }
+            {noInsc ? 
+            <div className="noinscritos">
               <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 300 }} aria-label="simple table">
                   <TableHead sx={{
@@ -135,14 +143,16 @@ const DashBoard = () => {
                       >
                         <TableCell component="th" scope="row" sx={{ fontSize: '0.8rem', fontFamily: 'Nunito' }}> {row.name}</TableCell>
                         <TableCell align="right" sx={{ fontSize: '0.9rem', fontFamily: 'Nunito', color: '#056447' }}>{row.calories}</TableCell>
-                        
+
                       </TableRow>
                     ))}
                   </TableBody>
                 </Table>
               </TableContainer>
             </div>
-          }
+            : ""}
+            {/*  */}
+          
         </div>
       </div>
     </AnimatedPage>;
