@@ -145,7 +145,7 @@ const DashBoard = () => {
       </div>
     : <div className="noinscritos">
     <TableContainer component={Paper}>
-    <Table sx={{ minWidth: 350 }} aria-label="simple table">
+    <Table sx={{ minWidth: 300 }} aria-label="simple table">
       <TableHead sx={{ backgroundColor: '#ffE2d4'
  }}>
         <TableRow>

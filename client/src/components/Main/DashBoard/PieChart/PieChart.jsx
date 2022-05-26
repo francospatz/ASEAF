@@ -49,7 +49,7 @@ function PieChart() {
 
     const data = {
 
-      labels: [`Colegios Inscritos ${year}`], 
+      labels: [/* `Colegios Inscritos ${year}` */], 
 
       datasets: [
         {
