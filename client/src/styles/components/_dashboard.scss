@@ -42,12 +42,14 @@
 }
 
 .noinscritos{
-    border: 1px solid rgba(176, 171, 171, 0.076);
+    border: 1px solid #F9B697;
     margin: left;
     margin-bottom: 2rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
+    width: 80vw;
+    border-radius: 8px;
 }
 
 
@@ -85,6 +87,7 @@ button > p:hover{
     letter-spacing: 0.02em
 }
 
+
 .boxfind{
     border: 2px solid #EF6424;
     border-radius: 7px;
@@ -105,4 +108,18 @@ button > p:hover{
 
 .boxfind::placeholder{
     padding-left: 19px;
+
+@media only screen and (min-width: 800px) {
+    .h1_class{
+    position: absolute;
+    margin-top: 6rem;
+    font-size: 3rem;
+    font-family: "Nunito";
+    width: 77%;
+    text-align: center;
+    font-weight: normal;
+    color: #62676A;
+    }
+
+
 }

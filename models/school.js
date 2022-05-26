@@ -4,7 +4,7 @@ require('dotenv').config();
 const getSchools = async () => {
 
   try {
-    const data = await pool.query(`select count(*) from edicion2021;`);
+    const data = await pool.query(`select count(*) from tablapruebas;`);
     result = data.rows;
     //pool.release()
     return result
