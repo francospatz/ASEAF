@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
 .progress_bar_class {
     display: flex;
     flex-direction: column;
@@ -13,14 +15,14 @@
     border-radius: 1;
     border: 1px solid rgba(128, 128, 128, 0.2);
     box-shadow: black;
-    box-shadow: 0px 4px 15px 9px rgba(81, 69, 159, 0.09);
+    box-shadow: 0px 4px 15px 9px rgba(34, 0, 255, 0.09);
     overflow: scroll;
     & p {
         margin-left: 5%;
         margin-bottom: 0.2%;
         font-size: 16px;
         font-family: 'Nunito';
-        color: #62676a9e;
+        color: #62676A;
 
     }
 }
@@ -64,3 +66,5 @@
         border-radius:40;
         text-align: 'right';
 }
+
+

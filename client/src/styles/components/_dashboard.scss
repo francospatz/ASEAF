@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
 .heading {
     margin: 5%;
     font-family: 'Nunito';
@@ -61,10 +63,6 @@ button > p:hover{
     cursor: pointer;
 }
 
-button > p:active{
-   color: #094E39;
-}
-
 .h1_class{
     position: absolute;
     margin-top: 6rem;
@@ -74,3 +72,34 @@ button > p:active{
     text-align: center;
     font-weight: normal;
 }
+
+
+@media only screen and (min-width: 800px) {
+
+    .h1_class {
+        
+        width: 18rem;
+   
+    }
+
+    .optionselected p{
+        margin-left: 5rem;
+        font-size: 0.8rem;
+    }
+      
+    .progress_bar_class{
+        margin-left: 7rem;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    .optionselected p{
+        margin-left: 8rem;
+        font-size: 0.8rem;
+    }
+      
+    .progress_bar_class{
+        margin-left: 10rem;
+    }
+  }
