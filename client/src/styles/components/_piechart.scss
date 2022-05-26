@@ -52,3 +52,20 @@
     }
 }
 
+@media only screen and (min-width: 800px) {
+
+    .chart_box{
+        width: 96%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: flex-end;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        box-shadow: 0px 4px 15px 9px rgb(81 69 159 / 9%);
+        padding: 11% 2%;
+        border-radius: 8px;
+    }
+
+}

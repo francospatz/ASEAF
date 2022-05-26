@@ -86,3 +86,18 @@ button > p:hover{
     margin-bottom: 0;
     letter-spacing: 0.02em
 }
+
+@media only screen and (min-width: 800px) {
+    .h1_class{
+    position: absolute;
+    margin-top: 6rem;
+    font-size: 3rem;
+    font-family: "Nunito";
+    width: 77%;
+    text-align: center;
+    font-weight: normal;
+    color: #62676A;
+    }
+
+    
+}
