@@ -64,10 +64,10 @@ function PieChart() {
             'transparent',
             'transparent',
           
-
           ],
           borderWidth: 0.5,
           cutout: 95,
+          
           
         },
       ],

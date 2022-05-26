@@ -45,11 +45,11 @@ const Form = () => {
       setError(false)
       setModal(!modal);
       window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            })
+        top: 0,
+        behavior: "smooth"
+      })
       document.getElementById("formularioaseaf").reset();
-      
+
     } else {
       setError(true)
       window.scrollTo({
@@ -94,8 +94,8 @@ const Form = () => {
             <input className="box" type="text" {...register("Provincia")} name="Provincia" value={inputText2} onChange={e => setInputText2(e.target.value)} placeholder="Provincia" required />
           </Hint>
           {error ? <h5 className="error">* Los datos introducidos son incorrectos</h5> : ''}
-          <h4 className="subtitle2"><a href="https://www.aseaf.org/contacto" target="_blank" className="a">¿No encuentras tu centro?</a> Contacta con ASEAF para registrarlo.</h4> 
-         
+          <h4 className="subtitle2"><a href="https://www.aseaf.org/contacto" target="_blank" className="a">¿No encuentras tu centro?</a> Contacta con ASEAF para registrarlo.</h4>
+
 
           <h4 className="subtitle">DATOS DEL RESPONSABLE QUE RELLENA EL FORMULARIO</h4>
           <input className="box" type="text"  {...register("nombre")} name="nombre" placeholder="Nombre" required />
